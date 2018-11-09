@@ -1,0 +1,91 @@
+<resources>
+    <string name="app_name">嘟嘟白卡软件</string>
+
+    <string name="lottery">信用卡</string>
+    <string name="found">发现</string>
+    <string name="loan">借款</string>
+
+    <string name="home_tab">借钱</string>
+    <string name="home_verify_tab">资讯</string>
+    <string name="me">我的</string>
+
+
+    <string name="me_billing_details">账单明细</string>
+    <string name="me_about_lexiaoian">意见反馈</string>
+    <string name="me_settings">微信公众号</string>
+    <string name="forget_password">忘记密码?</string>
+    <string name="opion">请输入您的意见，我们及时反馈</string>
+
+    <string name="home_dialog_content">\u3000\u3000认证信息之后，平台会根据您的个人信息推荐给您下款率更高的贷款产品，减去多次申请的麻烦。</string>
+    <string name="about_we"></string>
+
+    <string name="meglive_prompt">请在光线充足的情况下进行检测</string>
+    <string name="meglive_detect_initfailed">检测器初始化失败</string>
+    <string name="meglive_camera_initfailed">打开前置摄像头失败</string>
+    <string name="meglive_getpermission_motion">请打开手机读取运动数据权限</string>
+    <string name="meglive_phone_vertical">请竖直握紧手机</string>
+    <string name="meglive_keep_eyes_open">请勿用手遮挡眼睛</string>
+    <string name="meglive_keep_mouth_open">请勿用手遮挡嘴巴</string>
+    <string name="face_not_found">请让我看到您的正脸</string>
+    <string name="face_too_dark">请让光线再亮点</string>
+    <string name="face_too_bright">请让光线再暗点</string>
+    <string name="face_too_small">请再靠近一些</string>
+    <string name="face_too_large">请再离远一些</string>
+    <string name="face_too_blurry">请避免侧光和背光</string>
+    <string name="face_out_of_rect">请保持脸在人脸框中</string>
+    <string name="meglive_pitch">缓慢点头</string>
+    <string name="meglive_yaw">左右摇头</string>
+    <string name="meglive_mouth_open_closed">张嘴</string>
+    <string name="meglive_eye_open_closed">眨眼</string>
+    <string name="meglive_pos_yaw_left">左转</string>
+    <string name="meglive_pos_yaw_right">右转</string>
+    <string name="tipsmouth">Open your mouth and close.</string>
+    <string name="tipblink">Do blink with your eyes.</string>
+    <string name="tippose">Rotate your pose vertically.</string>
+    <string name="facelost">Face Lost</string>
+    <string name="timeout">超时</string>
+    <string name="authok">Success</string>
+    <string name="aufail">Failed</string>
+    <string name="steps">活体检测:</string>
+    <string name="pos_detection">POS</string>
+    <string name="mouth_detection">MOUTH</string>
+    <string name="blink_detection">BLINK</string>
+
+    <array name="detect_type">
+        <item>眨眼</item>
+        <item>张嘴</item>
+        <item>摇头</item>
+    </array>
+    <array name="detect_result">
+        <item></item>
+        <item>LIVEPASS</item>
+        <item>人脸追踪失败</item>
+        <item>超时失败</item>
+        <item>LIVENOTPASS</item>
+    </array>
+
+    <string name="loading_text">使用说明：\n1、首先您需要输入姓名；\n2、之后您需要按照屏幕上的提示完成3个动作，以通过活体检测，同时软件会将您的人脸图像发送至服务器进行人脸验证；\n3、如果您没有通过活体检测或者人脸验证，则登录失败，反之则登录成功。</string>
+    <string name="loading_confirm">OK,I Know</string>
+    <string name="netowrk_parse_failed">解析服务器数据失败</string>
+    <string name="network_error">网络请求失败</string>
+    <string name="verify_error">验证失败</string>
+    <string name="verify_success">验证成功</string>
+    <string name="liveness_detection_failed">活体检测失败</string>
+    <string name="liveness_detection_failed_timeout">活体检测超时失败</string>
+    <string name="liveness_detection_failed_action_blend">活体检测动作错误</string>
+    <string name="liveness_detection_failed_not_video">活体检测连续性检测失败</string>
+    <string name="novalidframe">没有合适的图像用于人脸识别</string>
+    <string name="weixin_desc">用微信扫一扫关注</string>
+    <string name="identity_tip1">请拍摄并上传您的身份证照片</string>
+    <string name="identity_tip2">*请确认识别出的信息与身份证一致，若不一致，请重新拍摄</string>
+    <string name="identity_tip3">*请确认识别出的信息与身份证一致，若不一致，请手动修改</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment2</string>
+    <string name="weixin_way_one">方法一：点击“复制微信号”按钮，将公众号名称复制到剪贴板，再点击“去关注”按钮，跳转到微信，在搜索框粘贴</string>
+    <string name="weixin_way_two">方法二：截屏保存二维码到相册，打开微信，点击扫一扫，在“相册”选择二维码图片扫码关注</string>
+    <!--自定义上拉加载属性值-->
+    <string name="srl_footer_nothing">别扯啦，我也是有底线的~</string>
+    <string name="viewpager_indicator">"1"</string>
+
+</resources>

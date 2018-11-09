@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/global_bg_gray"
+    tools:context=".ui.activity.LoanBooksActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb_loan_book"
+        android:background="@color/white"
+        style="@style/AppTheme.Toolbar">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height">
+
+            <ImageView
+                android:id="@+id/iv_return"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:layout_centerVertical="true"
+                android:scaleType="center"
+                android:src="@drawable/login_return1"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:textColor="@color/global_txt_black5"
+                android:id="@+id/tv_identity_title"
+                style="@style/title_txt_style"
+                android:gravity="center"
+                android:text="贷款账本" />
+
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:id="@+id/iv_white_add"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:layout_centerVertical="true"
+                android:scaleType="center"
+                android:layout_marginRight="@dimen/dp_5"
+                android:src="@drawable/white_add"
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <ListView
+        android:scrollbars="none"
+        android:id="@+id/listview"
+          android:dividerHeight="0dp"
+        android:divider="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+
+
+
+</LinearLayout>

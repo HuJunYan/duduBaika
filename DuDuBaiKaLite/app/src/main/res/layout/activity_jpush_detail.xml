@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".ui.activity.JpushDetailActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb_title"
+        style="@style/AppTheme.Toolbar"
+        android:background="@color/global_bg_white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height">
+
+            <ImageView
+                android:id="@+id/iv_return"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:layout_centerVertical="true"
+                android:scaleType="center"
+                android:src="@drawable/login_return1"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tv_me_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="消息详情"
+                android:textColor="@color/global_txt_black4"
+                android:textSize="@dimen/sp_18" />
+            <View
+               android:layout_alignParentBottom="true"
+                android:id="@+id/view_identity"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/tb_identity"
+                android:background="@color/global_activity_bg_color" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:textSize="@dimen/sp_16"
+        android:textColor="@color/home_zx_text"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/dp_25"
+        android:layout_marginRight="@dimen/dp_25"
+        android:layout_marginTop="@dimen/dp_10"
+        android:id="@+id/tv_content_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40">
+
+        <TextView
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:layout_centerInParent="true"
+            android:background="@drawable/shape_msg_center_time"
+            android:id="@+id/tv_message_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            />
+
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></WebView>
+
+</LinearLayout>

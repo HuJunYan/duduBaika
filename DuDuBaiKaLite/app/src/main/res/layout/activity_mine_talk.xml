@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.TalkHomeActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mine_talk_tb"
+        style="@style/AppTheme.Toolbar"
+        android:background="@color/global_bg_white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height">
+
+            <ImageView
+                android:id="@+id/iv_return"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:layout_centerVertical="true"
+                android:scaleType="center"
+                android:src="@drawable/login_return1"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="我的帖子"
+                android:textColor="@color/global_txt_black4"
+                android:textSize="17sp" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <View
+        android:layout_height="1px"
+        android:layout_width="match_parent"
+        android:background="@color/main_item_bottom_line_color"
+        />
+    <RelativeLayout
+        android:visibility="gone"
+        android:background="@color/white"
+        android:id="@+id/search_key"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height">
+
+
+        <TextView
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/search_icon"
+            android:drawablePadding="@dimen/dp_5"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:layout_marginRight="@dimen/dp_5"
+            android:layout_toLeftOf="@id/find"
+            android:id="@+id/p_name_key"
+            android:hint="请输入下款口子名称"
+            android:textSize="@dimen/sp_12"
+            android:paddingLeft="@dimen/dp_10"
+            android:textColorHint="@color/edit_text_hint_color"
+            android:textColor="@color/global_txt_black4"
+            android:layout_margin="@dimen/dp_10"
+            android:background="@drawable/shape_grey"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/dp_5"
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+
+        <ImageView
+            android:id="@+id/fatie"
+            android:scaleType="center"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/fatie"
+            android:layout_marginBottom="@dimen/dp_50"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_50" />
+    </RelativeLayout>
+
+
+</LinearLayout>

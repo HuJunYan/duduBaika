@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/global_bg_gray"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/itme_product"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/global_bg_white">
+
+        <RelativeLayout
+            android:layout_marginTop="22dp"
+            android:id="@+id/rl_item_logo"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="43dp"
+                android:layout_height="43dp"
+                android:layout_centerHorizontal="true"
+                app:civ_border_color="@color/global_activity_bg_color"
+                app:civ_border_width="1px" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_toRightOf="@id/rl_item_logo"
+            android:layout_marginTop="22dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40">
+            <RelativeLayout
+                android:layout_weight="8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                
+                <View
+                    android:layout_alignParentRight="true"
+                    android:background="@color/main_bottom_line_color"
+                    android:layout_width="1px"
+                    android:layout_height="40dp"/>
+
+                <RelativeLayout
+                  android:layout_alignParentLeft="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/ed_money_value1"
+                    android:textSize="@dimen/sp_18"
+                    android:textColor="@color/global_txt_black4"
+                    android:layout_width="wrap_content"
+                    android:text="5000"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_toRightOf="@id/ed_money_value1"
+                    android:id="@+id/ed_money_value2"
+                    android:textSize="10sp"
+                    android:textColor="@color/global_txt_black4"
+                    android:layout_width="wrap_content"
+                    android:text="元"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_toRightOf="@id/ed_money_value2"
+                    android:id="@+id/ed_money_value3"
+                    android:textSize="@dimen/sp_18"
+                    android:textColor="@color/global_txt_black4"
+                    android:layout_width="wrap_content"
+                    android:text="-2000"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_toRightOf="@id/ed_money_value3"
+                    android:id="@+id/ed_money_value4"
+                    android:textSize="10sp"
+                    android:textColor="@color/global_txt_black4"
+                    android:layout_width="wrap_content"
+                    android:text="万"
+                    android:layout_height="wrap_content" />
+
+
+                <TextView
+                    android:layout_marginLeft="30dp"
+                    android:layout_below="@id/ed_money_value3"
+                    android:layout_marginTop="4dp"
+                    android:id="@+id/ed"
+                    android:textSize="10sp"
+                    android:textColor="@color/global_txt_black5"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:text="额度"
+                    android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_weight="5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_alignParentRight="true"
+                    android:background="@color/main_bottom_line_color"
+                    android:layout_width="1px"
+                    android:layout_height="40dp"/>
+
+                <RelativeLayout
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/yll_value1"
+                    android:textSize="@dimen/sp_18"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:textColor="@color/global_txt_black4"
+                    android:layout_width="wrap_content"
+                    android:text="1"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_toRightOf="@id/yll_value1"
+                    android:id="@+id/yll_value2"
+                    android:textSize="10sp"
+                    android:textColor="@color/global_txt_black4"
+                    android:layout_width="wrap_content"
+                    android:text="天"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:layout_below="@id/yll_value2"
+                    android:layout_marginTop="4dp"
+                    android:id="@+id/yll"
+                    android:textSize="10sp"
+                    android:textColor="@color/global_txt_black5"
+                    android:layout_width="wrap_content"
+                    android:text="下款时长"
+                    android:gravity="center"
+                    android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/qx_time_value3"
+                        android:textSize="@dimen/sp_18"
+                        android:textColor="@color/global_txt_black4"
+                        android:layout_width="wrap_content"
+                        android:text="0.32"
+                        android:layout_marginLeft="8dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:layout_toRightOf="@id/qx_time_value3"
+                        android:id="@+id/qx_time_value4"
+                        android:textSize="10sp"
+                        android:textColor="@color/global_txt_black4"
+                        android:layout_width="wrap_content"
+                        android:text="%"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/qx_time_value3"
+                        android:layout_marginTop="4dp"
+                        android:id="@+id/qx"
+                        android:textSize="10sp"
+                        android:textColor="@color/global_txt_black5"
+                        android:layout_width="wrap_content"
+                        android:text="利率"
+                        android:gravity="center"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="-15dp"
+            android:background="@drawable/hd"
+            android:textSize="@dimen/dp_10"
+            android:id="@+id/hot"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="热门产品"
+            android:rotation="45"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:paddingTop="@dimen/dp_10"
+        android:id="@+id/ll_desc"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+        <TextView
+            android:id="@+id/product_name"
+            android:gravity="center"
+            android:text="宜人贷"
+            android:textSize="10sp"
+            android:textColor="@color/global_txt_black4"
+            android:layout_centerHorizontal="true"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="9"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/jkqx"
+                android:text="借款期限"
+                android:textSize="@dimen/sp_14"
+                android:gravity="left"
+                android:textColor="@color/global_txt_black5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_toRightOf="@id/jkqx"
+                android:id="@+id/cycle"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:text="20 天-36 个月"
+                android:textSize="@dimen/sp_14"
+                android:gravity="left"
+                android:textColor="@color/blue_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/money_spend"
+                android:textSize="10sp"
+                android:gravity="left"
+                android:textColor="@color/global_txt_black5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+
+        <View
+            android:id="@+id/gray_bg"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@color/global_bg_gray"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_10"/>
+
+    </LinearLayout>
+</LinearLayout>

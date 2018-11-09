@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+      android:orientation="vertical"
+    android:layout_height="wrap_content"
+    >
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/p_logo"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_width="32dp"
+            android:layout_height="32dp" />
+
+        <TextView
+            android:id="@+id/p_name"
+            android:text="蚂蚁金服"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/global_txt_black5"
+            android:layout_toRightOf="@id/p_logo"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <View
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_alignParentBottom="true"
+            android:background="@color/red_home"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

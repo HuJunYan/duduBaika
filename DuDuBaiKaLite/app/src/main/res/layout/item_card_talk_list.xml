@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/dp_8"
+        android:id="@+id/rl_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_marginLeft="@dimen/dp_15"
+            android:id="@+id/item_iv"
+            android:layout_centerVertical="true"
+            android:src="@drawable/money_da"
+            android:layout_width="@dimen/dp_25"
+            android:layout_height="@dimen/dp_25" />
+
+        <TextView
+          android:layout_toRightOf="@id/item_iv"
+            android:id="@+id/tv_phone"
+            android:text="1777777"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/home_zx_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:src="@drawable/yellow_arrow_right"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_toRightOf="@id/item_iv"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:id="@+id/tv_content"
+        android:text="这是标题"
+        android:textIsSelectable="true"
+        android:textColorLink="@color/blue"
+        android:focusable="false"
+        android:editable="false"
+        android:autoText="true"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/home_zx_text"
+        android:layout_marginRight="@dimen/dp_15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.dudubaika.ui.view.NoScrollGridView
+        android:layout_marginLeft="@dimen/dp_15"
+        android:background="@color/white"
+        android:id="@+id/gridview"
+        android:numColumns="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.dudubaika.ui.view.NoScrollGridView>
+
+    <View
+        android:layout_marginTop="13dp"
+        android:layout_height="10px"
+        android:layout_width="match_parent"
+        android:background="@color/me_bg_color"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:id="@+id/item_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+
+</LinearLayout>

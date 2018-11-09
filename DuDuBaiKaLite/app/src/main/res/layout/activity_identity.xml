@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_bg_gray"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb_identity"
+        style="@style/AppTheme.Toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_identity_back"
+                style="@style/title_back_style" />
+
+            <TextView
+                android:id="@+id/tv_identity_title"
+                style="@style/title_txt_style"
+                android:gravity="center"
+                android:text="身份认证" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <View
+        android:id="@+id/view_identity"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:layout_below="@+id/tb_identity"
+        android:background="@color/global_bg_gray" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_identity"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="73dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/iv_identity_tip_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="请拍摄并上传您的身份证照片"
+                        android:textColor="@color/global_txt_black5"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@id/iv_identity_tip_info"
+                        android:src="@drawable/ic_identity_info_left" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/iv_identity_tip_info"
+                        android:src="@drawable/ic_identity_info_right" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingBottom="40dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="20dp">
+
+                <ImageView
+                    android:id="@+id/iv_identity_auth_pic"
+                    android:layout_width="105dp"
+                    android:layout_height="85dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_identity1" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/iv_identity_auth_pic2"
+                    android:layout_width="105dp"
+                    android:layout_height="85dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_identity2" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/iv_identity_auth_face"
+                    android:layout_width="105dp"
+                    android:layout_height="85dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_face" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_identity_name_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/global_activity_bg_color">
+
+                    <TextView
+                        android:id="@+id/tv_identity_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:textColor="@color/edit_text_hint_color"
+                        android:textSize="12dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center"
+                        android:text="真实姓名"
+                        android:textColor="@color/global_txt_black5"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/et_identity_name"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="120dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@null"
+                        android:enabled="false"
+                        android:textColor="@color/global_txt_black4"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_identity_name_edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="20dp"
+                        android:src="@drawable/ic_identity_edit"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/global_line_bg" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/global_bg_white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center"
+                        android:text="身份证号"
+                        android:textColor="@color/global_txt_black5"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/et_identity_id_num"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="120dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@null"
+                        android:enabled="false"
+                        android:textColor="@color/global_txt_black4"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_identity_id_edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="20dp"
+                        android:src="@drawable/ic_identity_edit"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_identity_save"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/global_btn_selector"
+                android:gravity="center"
+                android:text="保存"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                android:text="保存成功后不支持修改，请务必使用本人信息"
+                android:gravity="center"
+                android:textSize="@dimen/sp_12"
+                android:textColor="@color/edit_text_hint_color"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

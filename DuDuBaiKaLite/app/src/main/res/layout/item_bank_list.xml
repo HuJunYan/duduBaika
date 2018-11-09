@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="90dp">
+        
+        <ImageView
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_15"
+            android:id="@+id/item_back_icon"
+            android:src="@drawable/yhk_icon"
+            android:layout_marginBottom="@dimen/dp_15"
+            android:layout_width="105dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:lines="1"
+            android:ellipsize="end"
+            android:text="标题"
+            android:textSize="@dimen/sp_16"
+            android:textColor="@color/home_zx_text"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_toRightOf="@id/item_back_icon"
+            android:id="@+id/item_bank_list_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:lines="1"
+            android:ellipsize="end"
+            android:text="享受特殊服务"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/global_edit"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_toRightOf="@id/item_back_icon"
+            android:layout_below="@id/item_bank_list_title"
+            android:id="@+id/item_bank_list_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:lines="1"
+            android:ellipsize="end"
+            android:text="立即办卡 >"
+            android:textSize="11sp"
+            android:textColor="@color/red_home"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_toRightOf="@id/item_back_icon"
+            android:layout_below="@id/item_bank_list_desc"
+            android:id="@+id/item_bank_list_now_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_alignParentBottom="true"
+            android:background="@color/main_item_bottom_line_color"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+        
+    </RelativeLayout>
+
+</LinearLayout>

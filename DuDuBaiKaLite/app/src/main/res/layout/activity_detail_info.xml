@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              xmlns:zhy="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/lgogin"
+              android:background="@color/global_activity_bg_color"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.dudubaika.ui.activity2.LoginActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb_info_detail"
+        style="@style/AppTheme.Toolbar"
+        android:background="@color/global_bg_white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height">
+
+            <ImageView
+                android:id="@+id/iv_buy_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:paddingStart="@dimen/dp_15"
+                android:src="@drawable/login_return1"
+                tools:ignore="ContentDescription" />
+
+
+            <TextView
+                android:id="@+id/tv_buy_detail_title"
+                style="@style/title_txt_style" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <include
+        android:id="@+id/progress"
+        layout="@layout/view_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tb_home"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:layout_marginTop="2.5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/global_activity_bg_color"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/global_bg_white">
+
+                <ImageView
+                    android:id="@+id/iv_buy_detail_icon"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/tv_buy_detail_product_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="28dp"
+                    android:layout_toRightOf="@+id/iv_buy_detail_icon"
+                    android:textColor="@color/global_txt_black4"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/tv_buy_detail_people_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_buy_detail_product_name"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_toRightOf="@+id/iv_buy_detail_icon"
+                    android:textColor="@color/global_txt_black4"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/global_bg_white">
+
+
+                <TextView
+                    android:id="@+id/tv_buy_detail_amount_title"
+                    style="@style/auth_center_txt_style"
+                    android:layout_width="100dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="借款额度" />
+
+                <TextView
+                    android:id="@+id/tv_buy_detail_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/tv_buy_detail_amount_title"
+                    android:textColor="@color/global_txt_black4"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/global_bg_white">
+
+                <View
+                    style="@style/split_line_style"
+                    android:layout_marginLeft="15dp" />
+
+                <TextView
+                    android:id="@+id/tv_buy_detail_date_title"
+                    style="@style/auth_center_txt_style"
+                    android:layout_width="100dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="借款期限" />
+
+                <TextView
+                    android:id="@+id/tv_buy_detail_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/tv_buy_detail_date_title"
+                    android:textColor="@color/global_txt_black4"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/global_bg_white">
+
+                <View
+                    style="@style/split_line_style"
+                    android:layout_marginLeft="15dp" />
+
+                <TextView
+                    android:id="@+id/tv_buy_detail_rate_title"
+                    style="@style/auth_center_txt_style"
+                    android:layout_width="100dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="18dp"
+                    android:text="参考费率" />
+
+                <TextView
+                    android:id="@+id/tv_buy_detail_rate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_toRightOf="@id/tv_buy_detail_rate_title"
+                    android:textColor="@color/global_txt_black4"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_buy_detail_rate_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_buy_detail_rate"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_toRightOf="@id/tv_buy_detail_rate_title"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/edit_text_hint_color"
+                    android:textSize="10sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/global_bg_white"
+                android:minHeight="60dp">
+
+                <View
+                    style="@style/split_line_style"
+                    android:layout_marginLeft="15dp" />
+
+                <TextView
+                    android:id="@+id/tv_buy_detail_conditions_title"
+                    style="@style/auth_center_txt_style"
+                    android:layout_width="100dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="18dp"
+                    android:text="申请条件" />
+
+                <TextView
+                    android:id="@+id/tv_buy_detail_conditions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_toRightOf="@id/tv_buy_detail_conditions_title"
+                    android:textColor="@color/global_txt_black4"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/global_bg_white">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/global_bg_white"
+                    android:gravity="center_vertical|start"
+                    android:text="认证资料"
+                    android:textColor="@color/global_txt_black2"
+                    android:textSize="14sp" />
+
+                <View
+                    style="@style/split_line_style"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="15dp" />
+            </RelativeLayout>
+
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:id="@+id/tfl_flowlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/global_bg_white"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                zhy:max_select="-1" />
+
+            <TextView
+                android:id="@+id/tv_buy_detail_apply"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="15dp"
+                android:background="@color/black"
+                android:gravity="center"
+                android:text="立即申请"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+

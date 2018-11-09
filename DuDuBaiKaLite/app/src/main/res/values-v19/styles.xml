@@ -1,0 +1,25 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="AppThemeBase">
+    </style>
+
+    <style name="AppTheme.TranslucentStatus">
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <!-- 分割线样式-->
+    <style name="split_line_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/global_line_bg</item>
+    </style>
+    <!-- 认证中心文字样式 (key)-->
+    <style name="auth_center_txt_style">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/global_txt_black2</item>
+        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+</resources>

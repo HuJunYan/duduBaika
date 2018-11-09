@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffffff</color>
+    <color name="colorPrimaryDark">#ffffffff</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorGreen">#ff669900</color>
+    <color name="colorGray">#adadad</color>
+
+    <color name="me_bg_color">#F4F4F4</color>
+    <color name="me_bg_line_color">#eeeeee</color>
+    <color name="me_text_color">#333333</color>
+    <color name="edit_text_baseline_color">#E0E0E0</color>
+    <color name="edit_text_hint_color">#969696</color>
+    <color name="forget_pwd_color">#40A1F7</color>
+    <color name="argument_color">#888888</color>
+
+
+    <!--全局背景颜色-->
+    <color name="global_bg_white">#ffffff</color>
+    <color name="global_bg_gray">#f4f4f4</color>
+
+    <color name="global_txt_black1">#000000</color>
+    <color name="global_txt_black2">#555555</color>
+    <color name="global_txt_black3">#888888</color>
+    <color name="global_txt_black4">#333333</color>
+    <color name="global_txt_black5">#666666</color>
+    <color name="global_txt_black9">#999999</color>
+
+    <color name="global_edit">#636363</color>
+
+    <!--全局分割线颜色-->
+    <color name="global_line_bg">#e0e0e0</color>
+    <color name="global_activity_bg_color">#ebebeb</color>
+    <color name="global_txt_gray">#c5c5c5</color>
+
+    <color name="home_item_button_color">#fe4550</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="main_bottom_line_color">#cccccc</color>
+    <color name="main_item_bottom_line_color">#DCDCDC</color>
+
+    <color name="dialog_bg_color">#00FFFFFF</color>
+    <color name="global_bg">#666666</color>
+    <color name="red">#FFFF0000</color>
+    <color name="global_red_color">#FF5353</color>
+    <color name="assess_line_color">#6d6d6d</color>
+
+    <color name="verify_home_title_color">#ff3a3a</color>
+    <!--<color name="red_home">#FF7058</color> 全局统一风格颜色-->
+    <color name="red_home">#CCA967</color>
+    <color name="blue">#0000EF</color>
+    <color name="very_code_bg_line">#FF7058</color>
+    <color name="yellow_home">#CCA967</color>
+    <color name="blue_home">#21aee9</color>
+    <color name="home_banner_select">#78bdc9</color>
+    <color name="home_banner_normal">#7E8DA2</color>
+    <color name="mine_loan_tag">#ffa468</color>
+    <color name="color_rules_content_bg">#F8F8F8</color>
+    <!--首页banner图片-->
+    <color name="home_banner_p_name">#F2F2F2</color>
+    <color name="home_banner_p_desc">#A9B6C9</color>
+    <color name="home_zx_text">#262626</color>
+
+    <!--首页item 颜色-->
+    <color name="home_item_ed">#16284E</color>
+    <color name="home_item_tag">#0D4C8B</color>
+
+    <color name="login_bg">#536381</color>
+    <color name="login_type_normal_bg">#C8C8C8</color>
+    <color name="login_type_bg">#C0C0C0</color>
+
+    <color name="found_foot_desc_bg">#ECF0F9</color>
+
+
+</resources>

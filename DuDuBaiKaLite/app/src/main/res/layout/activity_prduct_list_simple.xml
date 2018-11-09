@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ui.activity.PrductListSimpleActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb"
+        style="@style/AppTheme.Toolbar"
+        android:background="#FEE48A">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+
+            <ImageView
+                android:id="@+id/iv_return"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:layout_centerVertical="true"
+                android:scaleType="center"
+                android:src="@drawable/login_return1"
+                tools:ignore="ContentDescription" />
+
+
+            <TextView
+                android:id="@+id/search"
+                android:background="@drawable/shape_my_ed"
+                android:paddingLeft="@dimen/dp_40"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingBottom="@dimen/dp_5"
+                android:paddingRight="@dimen/dp_40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:drawablePadding="@dimen/dp_5"
+                android:drawableLeft="@drawable/search"
+                android:text="选择下款口子"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_add"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_40"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:paddingEnd="@dimen/dp_15"
+                android:paddingStart="@dimen/dp_15"
+                android:text="添加"
+                android:textColor="#664100"
+                android:textSize="@dimen/sp_14"
+                />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <View
+        android:background="@color/global_bg_gray"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+    <TextSwitcher
+        android:layout_marginTop="@dimen/dp_15"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_5"
+        android:background="@color/white"
+        android:layout_below="@id/banner_guide_content"
+        android:id="@+id/main_top_txt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_alignParentLeft="true"
+        android:ellipsize="end"
+        android:inAnimation="@anim/push_up_in"
+        android:outAnimation="@anim/push_up_out"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_12" />
+
+
+
+    <ListView
+        android:id="@+id/listview"
+        android:background="@color/white"
+        android:dividerHeight="0dp"
+        android:divider="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+
+
+</LinearLayout>

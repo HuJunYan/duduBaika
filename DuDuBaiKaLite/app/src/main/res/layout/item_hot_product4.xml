@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/itme_product2"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="90dp">
+
+        <View
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="@color/main_item_bottom_line_color"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+        <View
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_10"
+            android:id="@+id/bottom_line"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:background="@color/main_item_bottom_line_color"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_logo"
+            android:layout_width="100dp"
+            android:layout_height="match_parent">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:src="@drawable/circle_logo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="18dp"
+                android:id="@+id/product_logo2"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:id="@+id/product_name2"
+                android:layout_below="@id/product_logo2"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/me_text_color"
+                android:textSize="@dimen/sp_12"
+                android:text="闪电借款"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_marginLeft="28dp"
+            android:layout_toRightOf="@id/rl_logo"
+            android:layout_centerVertical="true"
+            android:textColor="@color/global_txt_black4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginRight="-15dp"
+            android:background="@drawable/hd"
+            android:textSize="@dimen/dp_10"
+            android:id="@+id/hot2"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="秒提现"
+            android:rotation="45"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

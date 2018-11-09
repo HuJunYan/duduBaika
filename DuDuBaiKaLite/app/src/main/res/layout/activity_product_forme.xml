@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.ProductFormeActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb_product_forme"
+        style="@style/AppTheme.Toolbar"
+        android:background="@color/global_bg_white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height">
+
+            <ImageView
+                android:id="@+id/iv_return"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:layout_centerVertical="true"
+                android:scaleType="center"
+                android:src="@drawable/login_return1"
+                tools:ignore="ContentDescription" />
+
+
+            <TextView
+                android:id="@+id/tv_home_title"
+                style="@style/ActivityTitleTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="我的额度"
+                android:textColor="@color/global_txt_black4" />
+
+            <TextView
+                android:id="@+id/tv_login"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_40"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:paddingEnd="@dimen/dp_15"
+                android:paddingStart="@dimen/dp_15"
+                android:text="登录"
+                android:textColor="@color/global_txt_black4"
+                android:textSize="@dimen/sp_16"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <View
+        android:background="@color/global_bg_gray"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+    
+    <RelativeLayout
+        android:background="@drawable/mine_ed"
+        android:layout_width="match_parent"
+        android:layout_height="175dp">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:padding="@dimen/dp_5"
+                android:id="@+id/white_circle"
+                android:src="@drawable/circle_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/mine_ed_key"
+                android:layout_marginTop="@dimen/dp_40"
+                android:text="您的额度"
+                android:textSize="@dimen/sp_12"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="20sp"
+                android:layout_below="@id/mine_ed_key"
+                android:id="@+id/mine_ed_value"
+                android:text=""
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </RelativeLayout>
+    
+    <TextView
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:paddingRight="@dimen/dp_15"
+        android:id="@+id/wnpe"
+        android:text=""
+        android:gravity="center"
+        android:background="@drawable/shape_wnpe"
+        android:layout_gravity="center"
+        android:paddingLeft="@dimen/dp_15"
+        android:textSize="@dimen/sp_14"
+        android:textColor="#F57A21"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp" />
+
+    <ListView
+        android:scrollbars="none"
+        android:id="@+id/listview"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+    <ListView
+        android:scrollbars="none"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:id="@+id/listview2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+    
+
+</LinearLayout>

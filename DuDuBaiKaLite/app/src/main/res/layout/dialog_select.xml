@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_item_dialog_style"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_dialog_select_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="选择本地图库"
+        android:textColor="@color/global_txt_black5"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/me_bg_line_color" />
+
+    <TextView
+        android:id="@+id/tv_dialog_select_camera"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="使用摄像头"
+        android:textColor="@color/global_txt_black5"
+        android:textSize="15sp" />
+
+</LinearLayout>

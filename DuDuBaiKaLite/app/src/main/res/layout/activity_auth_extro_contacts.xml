@@ -1,0 +1,290 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_activity_bg_color"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb_auth_extro"
+        style="@style/AppTheme.Toolbar"
+        android:background="@color/global_bg_white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height">
+
+            <ImageView
+                android:id="@+id/iv_auth_extro_back"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:scaleType="center"
+                android:src="@drawable/login_return1"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/ActivityTitleTheme"
+                android:text="紧急联系人" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tb_auth_extro"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/global_bg_white">
+
+
+            <TextView
+                android:id="@+id/tv_auth_nexus1_key"
+                style="@style/auth_center_txt_style"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="与我关系" />
+
+            <RelativeLayout
+                android:id="@+id/rl_auth_nexus1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/tv_auth_nexus1_key">
+
+                <TextView
+                    android:id="@+id/tv_auth_nexus1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/global_txt_black4"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/ic_arrow_down"
+                    tools:ignore="ContentDescription" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/global_bg_white">
+
+            <View style="@style/split_line_style" />
+
+            <TextView
+                android:id="@+id/tv_auth_nexus_name1_key"
+                style="@style/auth_center_txt_style"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="姓    名" />
+
+            <EditText
+                android:id="@+id/et_auth_nexus_name1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/iv_auth_contacts1"
+                android:layout_alignParentEnd="true"
+
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/tv_auth_nexus_name1_key"
+                android:background="@null"
+                android:hint="请输入姓名"
+                android:maxLength="50"
+                android:textColorHint="@color/edit_text_hint_color"
+                android:textSize="14dp" />
+
+
+            <ImageView
+                android:id="@+id/iv_auth_contacts1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/contact_icon"
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/global_bg_white">
+
+            <View style="@style/split_line_style" />
+
+            <TextView
+                android:id="@+id/tv_auth_nexus_phone"
+                style="@style/auth_center_txt_style"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="手机号" />
+
+            <EditText
+                android:id="@+id/et_auth_nexus_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/tv_auth_nexus_phone"
+                android:background="@null"
+                android:hint="请输入联系电话"
+                android:inputType="phone"
+                android:maxLength="18"
+                android:textColorHint="@color/edit_text_hint_color"
+                android:textSize="14dp" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/global_bg_white">
+
+            <View style="@style/split_line_style" />
+
+            <TextView
+                android:id="@+id/tv_auth_nexus2_key"
+                style="@style/auth_center_txt_style"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="与我关系" />
+
+            <RelativeLayout
+                android:id="@+id/rl_auth_nexus2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/tv_auth_nexus2_key">
+
+                <TextView
+                    android:id="@+id/tv_auth_nexus2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/global_txt_black4"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/ic_arrow_down"
+                    tools:ignore="ContentDescription" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/global_bg_white">
+
+            <View style="@style/split_line_style" />
+
+            <TextView
+                android:id="@+id/tv_auth_nexus_name2_key"
+                style="@style/auth_center_txt_style"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="姓    名" />
+
+            <EditText
+                android:id="@+id/et_auth_nexus_name2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/tv_auth_nexus_name2_key"
+                android:background="@null"
+                android:hint="请输入姓名"
+                android:maxLength="50"
+                android:textColorHint="@color/edit_text_hint_color"
+                android:textSize="14dp" />
+
+            <ImageView
+                android:id="@+id/iv_auth_contacts2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/contact_icon"
+                tools:ignore="ContentDescription" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/global_bg_white">
+
+            <View style="@style/split_line_style" />
+
+            <TextView
+                android:id="@+id/tv_auth_nexus_phone2"
+                style="@style/auth_center_txt_style"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="手机号" />
+
+            <EditText
+                android:id="@+id/et_auth_nexus_phone2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/tv_auth_nexus_phone2"
+                android:background="@null"
+                android:hint="请输入联系电话"
+                android:inputType="phone"
+                android:maxLength="18"
+                android:textColorHint="@color/edit_text_hint_color"
+                android:textSize="14dp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_auth_extro_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/global_btn_selector"
+            android:gravity="center"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16" />
+    </LinearLayout>
+    <include
+        android:id="@+id/progress"
+        layout="@layout/view_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tb_auth_extro"
+        android:visibility="gone" />
+
+</RelativeLayout>

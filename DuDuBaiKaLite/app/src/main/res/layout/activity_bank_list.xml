@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".ui.activity.BankListActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb_bank_list"
+        style="@style/AppTheme.Toolbar"
+        android:background="@color/global_bg_white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+           android:layout_height="@dimen/dp_40">
+
+
+            <ImageView
+                android:id="@+id/iv_return"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:scaleType="center"
+                android:src="@drawable/login_return1"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tb_title"
+                style="@style/ActivityTitleTheme"
+                android:text="银行卡列表" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+    <View
+        android:background="@color/main_item_bottom_line_color"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/bank_list_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+
+</LinearLayout>

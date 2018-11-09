@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+<RelativeLayout
+    android:layout_width="290dp"
+    android:layout_height="288dp"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_product"
+        android:layout_alignParentBottom="true"
+        android:layout_width="278dp"
+        android:layout_height="280dp"
+        android:background="@drawable/home_product_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/center"
+            android:layout_width="1px"
+            android:layout_height="5px"
+            android:layout_centerInParent="true"
+            />
+        <TextView
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:maxLines="2"
+            android:layout_below="@+id/center"
+            android:id="@+id/dialog_product_desc"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            />
+
+
+        <TextView
+
+            android:id="@+id/product_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="top|center_horizontal"
+            android:text="嘟嘟花"
+            android:layout_marginBottom="6dp"
+            android:textColor="@color/home_zx_text"
+            android:textSize="14sp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/product_name"
+            android:layout_marginBottom="@dimen/dp_4"
+            android:src="@drawable/home_product_bg"
+            android:id="@+id/iv_logo"
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:scaleType="center"
+        android:id="@+id/dialog_product_cancle"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/dialog_product_dissmiss"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+
+</RelativeLayout>
+</LinearLayout>

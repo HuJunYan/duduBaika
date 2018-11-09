@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_bg_white"
+    tools:context="com.dudubaika.ui.activity2.LoginActivity">
+
+    <include layout="@layout/layout_back" />
+
+    <FrameLayout
+        android:id="@+id/ff_login"
+        android:layout_width="match_parent"
+        android:layout_height="235dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            tools:ignore="ContentDescription" />
+    </FrameLayout>
+
+    <com.dudubaika.ui.view.MyLoginEditText
+        android:id="@+id/et_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/ff_login"
+        android:layout_marginLeft="37dp"
+        android:layout_marginRight="37dp"
+        app:login_edit_hint="手机号"
+        app:login_edit_img_left="@drawable/regist_phone"
+        app:login_edit_inputType="number"
+        app:login_edit_tv_right="验证码" />
+
+    <com.dudubaika.ui.view.MyLoginEditText
+        android:id="@+id/et_verify_code"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/et_phone_number"
+        android:layout_marginLeft="37dp"
+        android:layout_marginRight="37dp"
+        app:login_edit_hint="验证码"
+        app:login_edit_img_left="@drawable/regist_code"
+        app:login_edit_inputType="number" />
+
+    <com.dudubaika.ui.view.MyLoginEditText
+        android:id="@+id/et_login_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/et_verify_code"
+        android:layout_marginLeft="37dp"
+        android:layout_marginRight="37dp"
+        app:login_edit_hint="密码"
+        app:login_edit_img_left="@drawable/regist_password"
+        app:login_edit_inputType="number" />
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@id/et_login_pwd"
+        android:layout_marginLeft="37dp"
+        android:layout_marginRight="37dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/shape_blue_corner"
+        android:gravity="center"
+        android:text="注册"
+        android:textColor="@color/global_bg_white"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_argument"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_login"
+        android:layout_marginTop="42dp"
+        android:gravity="center"
+        android:text="注册代表你同意\n钱用户服务协议"
+        android:textColor="@color/argument_color"
+        android:textSize="14sp" />
+</RelativeLayout>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <LinearLayout
+        android:background="@drawable/shape_blue_corner"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RelativeLayout
+                android:id="@+id/rl_item_logo"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:id="@+id/dialog_profile_image"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                   android:layout_centerVertical="true"
+                    app:civ_border_color="@color/global_activity_bg_color"
+                    app:civ_border_width="1px" />
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:id="@+id/dialog_p_name"
+                    android:text="百度"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:textSize="@dimen/sp_12"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/dialog_profile_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_toRightOf="@id/rl_item_logo"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40">
+                <RelativeLayout
+                    android:layout_weight="9"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+
+
+                    <RelativeLayout
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/dialog_ed_money_value1"
+                            android:textSize="@dimen/sp_12"
+                            android:textColor="@color/white"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_width="wrap_content"
+                            android:text="5000"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_marginTop="@dimen/dp_4"
+                            android:layout_toRightOf="@id/dialog_ed_money_value1"
+                            android:id="@+id/dialog_ed_money_value2"
+                            android:textSize="10sp"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:text="元"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_toRightOf="@id/dialog_ed_money_value2"
+                            android:id="@+id/dialog_ed_money_value3"
+                            android:textSize="@dimen/sp_12"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:text="-20"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_toRightOf="@id/dialog_ed_money_value3"
+                            android:id="@+id/dialog_ed_money_value4"
+                            android:textSize="8sp"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:text="万"
+                            android:layout_height="wrap_content" />
+
+
+                        <TextView
+                            android:layout_marginLeft="30dp"
+                            android:layout_below="@id/dialog_ed_money_value3"
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/dialog_ed"
+                            android:textSize="10sp"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:gravity="center"
+                            android:text="额度"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+
+
+                    <RelativeLayout
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/dialog_yll_value1"
+                            android:textSize="@dimen/sp_14"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:text="1"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@id/dialog_yll_value1"
+                            android:id="@+id/dialog_yll_value2"
+                            android:textSize="8sp"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:text="天"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_centerInParent="true"
+                            android:layout_below="@id/dialog_yll_value2"
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/dialog_yll"
+                            android:textSize="10sp"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:text="下款时长"
+                            android:gravity="center"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+
+                        <TextView
+                            android:id="@+id/dialog_qx_time_value3"
+                            android:textSize="@dimen/sp_14"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:text="0.32"
+                            android:layout_marginLeft="8dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_marginTop="@dimen/dp_5"
+                            android:layout_toRightOf="@id/dialog_qx_time_value3"
+                            android:id="@+id/dialog_qx_time_value4"
+                            android:textSize="10sp"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:text="%"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@id/dialog_qx_time_value3"
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/dialog_qx"
+                            android:textSize="10sp"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:text=""
+                            android:gravity="center"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/bottom_dissmiss"
+                    android:layout_weight="5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/white"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                         android:src="@drawable/home_bottom_ddelete"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <TextView
+                android:drawableLeft="@drawable/home_bottom_dialog_right"
+                android:textSize="@dimen/dp_10"
+                android:id="@+id/hot"
+                android:drawablePadding="@dimen/dp_5"
+                android:textColor="@color/white"
+                android:text=""
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+
+
+
+
+    </LinearLayout>
+</LinearLayout>

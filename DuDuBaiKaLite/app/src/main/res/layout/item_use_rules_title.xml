@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/global_bg_white"
+        android:orientation="horizontal"
+        >
+
+        <View
+            android:id="@+id/view_top_line"
+            style="@style/split_line_style"
+            android:layout_width="match_parent"
+            />
+
+        <TextView
+            android:id="@+id/tv_rules_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_toLeftOf="@+id/iv_rules_item_icon"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/global_txt_black4"
+            android:textSize="15sp"
+            />
+
+        <ImageView
+            android:id="@+id/iv_rules_item_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:rotation="180"
+            android:src="@drawable/retract_top"
+            />
+
+        <View
+            android:id="@+id/view_bottom_line"
+            style="@style/split_line_style"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+</LinearLayout>

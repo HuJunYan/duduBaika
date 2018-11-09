@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="252dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ic_service_error_top"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_dialog_error_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-1dp"
+        android:background="@drawable/shape_dialog_error_border"
+        android:gravity="left"
+        android:lineSpacingExtra="3dp"
+        android:paddingBottom="21dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:paddingTop="21dp"
+        android:text="系统维护中..."
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/iv_dialog_error_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ic_error_close"
+        tools:ignore="ContentDescription" />
+</LinearLayout>

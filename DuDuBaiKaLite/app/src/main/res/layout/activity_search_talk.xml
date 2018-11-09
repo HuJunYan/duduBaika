@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_bg_gray"
+    android:orientation="vertical"
+    tools:context=".ui.activity.PrductListSimpleActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb"
+        style="@style/AppTheme.Toolbar"
+        android:background="#FEE48A">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <TextView
+                android:id="@+id/tv_cancle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_40"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:paddingEnd="@dimen/dp_15"
+                android:paddingStart="@dimen/dp_15"
+                android:text="取消"
+                android:textColor="#664100"
+                android:textSize="@dimen/sp_14"
+                />
+
+            <EditText
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_toLeftOf="@id/tv_cancle"
+                android:id="@+id/search"
+                android:background="@drawable/shape_my_ed"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingLeft="@dimen/dp_15"
+                android:paddingBottom="@dimen/dp_5"
+                android:paddingRight="@dimen/dp_40"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:drawablePadding="@dimen/dp_10"
+                android:textSize="@dimen/sp_14"
+                android:drawableLeft="@drawable/search"
+                android:hint="想看点什么?"
+                android:textColorHint="@color/white"
+                android:inputType="text"
+                android:singleLine="true"
+                android:imeOptions="actionSearch"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/search_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+
+
+</LinearLayout>

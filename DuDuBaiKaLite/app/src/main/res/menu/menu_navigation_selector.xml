@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/tab_home"
+        android:icon="@drawable/selector_home"
+        android:title="@string/home_tab" />
+    <item
+        android:id="@+id/tab_credit_card"
+        android:icon="@drawable/selector_card"
+        android:title="@string/lottery" />
+    <item
+        android:id="@+id/tab_found"
+        android:icon="@drawable/selector_found"
+        android:title="@string/found" />
+
+    <item
+        android:id="@+id/tab_me"
+        android:checked="true"
+        android:icon="@drawable/selector_me"
+        android:title="@string/me" />
+
+</menu>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb_info_suggest"
+        style="@style/AppTheme.Toolbar"
+        android:background="@color/global_bg_white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height">
+
+            <ImageView
+                android:id="@+id/iv_suggest_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:src="@drawable/login_return1"
+                tools:ignore="ContentDescription" />
+
+
+            <TextView
+                android:id="@+id/tv_buy_detail_title"
+                style="@style/title_txt_style"
+                android:text="意见反馈" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <include
+        android:id="@+id/progress_suggest"
+        layout="@layout/view_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tb_info_suggest"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/tv_suggest"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/tb_info_suggest"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="top|left"
+        android:background="@drawable/shape_suggest_bg"
+        android:hint="请输入您的宝贵意见，我们会及时反馈" />
+
+    <EditText
+        android:id="@+id/tv_suggest_tel_num"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/tv_suggest"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_suggest_bg"
+        android:gravity="center_vertical"
+        android:hint="请输入您的联系方式"
+        android:inputType="phone" />
+
+
+    <Button
+        android:id="@+id/btn_suggest_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/lite_blue"
+        android:text="提交"
+        android:textColor="@color/white" />
+</RelativeLayout>

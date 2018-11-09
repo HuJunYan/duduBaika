@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".ui.fragment.FoundFragment">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb_found"
+        style="@style/AppTheme.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/buttonBarLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/title_height"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/ActivityTitleTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/global_bg"
+                android:gravity="center"
+                android:text="发现" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <View
+        android:layout_marginBottom="@dimen/dp_8"
+        android:id="@+id/view_top_line"
+        android:layout_alignParentBottom="true"
+        style="@style/split_line_style"
+        android:layout_width="match_parent"
+        />
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:background="@color/me_bg_color"
+            android:id="@+id/refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/jqqd"
+                    android:visibility="gone"
+                    android:src="@drawable/jqqd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+</LinearLayout>

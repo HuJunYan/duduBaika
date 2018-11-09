@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+           android:layout_marginLeft="@dimen/dp_15"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="18dp"
+            android:id="@+id/product_logo"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+        <TextView
+            android:id="@+id/product_name"
+            android:layout_toRightOf="@id/product_logo"
+            android:layout_centerVertical="true"
+            android:textColor="@color/me_text_color"
+            android:textSize="@dimen/sp_12"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/item_dh_key"
+            android:text="待还金额(元)"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/global_txt_black5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_below="@id/item_dh_key"
+            android:layout_marginTop="@dimen/dp_15"
+            android:id="@+id/item_dh_money"
+            android:text="50000"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/global_txt_black4"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginTop="23dp"
+            android:id="@+id/item_dh_date_key"
+            android:text="距离还款日(天)"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/global_txt_black5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+            android:layout_below="@id/item_dh_date_key"
+            android:layout_marginTop="@dimen/dp_10"
+            android:id="@+id/item_dh_date"
+            android:text="10"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/global_txt_black4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/loan_status"
+            android:src="@drawable/loan_dh"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:visibility="gone"
+            android:src="@drawable/gif_yh"
+            android:background="@drawable/gif_bg"
+            android:id="@+id/is_show_gif"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</LinearLayout>

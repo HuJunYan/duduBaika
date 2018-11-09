@@ -1,0 +1,219 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'walle'
+apply plugin: 'com.mob.sdk'
+
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+    defaultConfig {
+        applicationId "com.dudubaika"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 150
+        versionName "1.5.0"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "c351d6ce238da83fc4a9a3b3",
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+    }
+
+    //魔蝎SDK moxie-client-1.3.4.aar需要加入下面代码
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    MobSDK {
+        appKey "2738dee9620de"
+        appSecret "6cb0b57a66d815f3146a018cae591c49"
+
+        ShareSDK {
+            //平台配置信息
+            devInfo {
+
+
+                QZone {
+                    id 1
+                    sortId 1
+                    appId "1106652489"
+                    appKey "jmJOyIeJUNLrwqd7"
+                    enable true
+
+                }
+
+                QQ {
+                    id 2
+                    sortId 2
+                    appId "1106652489"
+                    appKey "jmJOyIeJUNLrwqd7"
+                    shareByAppClient true
+                }
+                Wechat {
+                    id 3
+                    sortId 3
+                    appId "wx948a22f6e2da9990"
+                    appSecret "63664ee6c187c92b057a12dedf4ed94b"
+                }
+                WechatMoments {
+                    id 4
+                    sortId 4
+                    appId "wx948a22f6e2da9990"
+                    appSecret "63664ee6c187c92b057a12dedf4ed94b"
+                }
+            }
+        }
+
+    }
+
+    signingConfigs {
+        meituan {
+            storeFile file("../../doc/dudubaika.jks")
+            storePassword "dudubaika2018"
+            keyAlias "dudubaika"
+            keyPassword "dudubaika2018"
+            v2SigningEnabled true
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.meituan
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.meituan
+        }
+    }
+
+}
+
+kapt {
+    generateStubs = true
+}
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:support-v4:27.1.1'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    //kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "org.jetbrains.anko:anko-appcompat-v7-commons:$anko_version"
+    //http
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.10.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    //rxJava
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.12'
+    //rxBinding
+    implementation 'com.jakewharton.rxbinding2:rxbinding:2.1.1'
+    //multidex
+    implementation 'com.android.support:multidex:1.0.3'
+    //解决Fragment懒加载问题
+    implementation 'me.yokeyword:fragmentation:1.3.1'
+    //eventBus
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    //底部导航栏的依赖,需要翻墙
+    implementation 'com.github.ittianyu:BottomNavigationViewEx:1.2.0'
+    //底部导航栏依赖的气泡
+    implementation 'q.rorbin:badgeview:1.1.0'
+    //支持下拉刷新的recyclerView
+    implementation 'com.jcodecraeer:xrecyclerview:1.3.2'
+    //动画
+    implementation 'com.airbnb.android:lottie:2.5.4'
+    //美团批量打包
+    implementation 'com.meituan.android.walle:library:1.1.6'
+    //viewpager下面的圆点
+    implementation 'me.relex:circleindicator:1.2.2@aar'
+    //下啦刷新
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
+    //recyclerView的Adapter
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.34'
+    //加载图片
+    implementation 'com.github.bumptech.glide:glide:4.6.1'
+    kapt 'com.github.bumptech.glide:compiler:4.6.1'
+    //dagger2
+    implementation 'com.google.dagger:dagger:2.15'
+    kapt 'com.google.dagger:dagger-compiler:2.15'
+    //java注解
+    compileOnly 'org.glassfish:javax.annotation:10.0-b28'
+    //dialog
+    implementation 'me.drakeet.materialdialog:library:1.3.1'
+    //更新进度条
+    implementation 'com.daimajia.numberprogressbar:library:1.4@aar'
+    //下载器
+    implementation 'com.liulishuo.filedownloader:library:1.7.2'
+    //VLayout
+    implementation('com.alibaba.android:vlayout:1.2.2@aar') {
+        transitive = true
+    }
+    //轮播图
+    implementation 'com.youth.banner:banner:1.4.10'
+    //动态权限
+    implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar'
+    //魔蝎淘宝认证
+//    implementation(name: 'moxie-client-1.3.4', ext: 'aar')
+    //布局
+    implementation 'com.hyman:flowlayout-lib:1.1.2'
+    //chrome调试工具
+    implementation 'com.facebook.stetho:stetho:1.5.0'
+    implementation 'com.facebook.stetho:stetho-okhttp3:1.5.0'
+    //存储crash日志
+    implementation 'com.balsikandar.android:crashreporter:1.0.9'
+    //圆形图片
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+
+    androidTestImplementation 'org.testng:testng:6.9.6'
+    //腾讯buggly
+    implementation 'com.tencent.bugly:crashreport:latest.release'
+    implementation 'com.tencent.bugly:nativecrashreport:latest.release'
+    //首页banner依赖
+    implementation 'cn.bingoogolapple:bga-banner:2.2.4@aar'
+    //日期选择器
+    implementation 'com.contrarywind:Android-PickerView:4.1.4'
+    //侧滑
+    implementation 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.3.0'
+    implementation 'com.github.mcxtzhang:all-base-adapter:V1.5.2'
+    //魔蝎依赖
+    implementation 'com.moxie:moxie-client:2.3.5'
+    //极光推送
+    implementation 'cn.jiguang.sdk:jpush:3.1.1'
+    implementation 'cn.jiguang.sdk:jcore:1.1.9'
+    //系统图片选择裁剪
+//    implementation 'cn.finalteam.rxgalleryfinal:library:1.0.9'
+    implementation 'cn.finalteam:galleryfinal:1.4.8.7'
+//    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.baoyz.actionsheet:library:1.1.4'
+    //share sdk
+//    implementation 'com.mob.sdk:MobSDK:+'
+
+}
+walle {
+    // 指定渠道包的输出路径
+    apkOutputFolder = new File("${project.buildDir}/outputs/channels");
+    // 定制渠道包的APK的文件名称
+    apkFileNameFormat = '${appName}-${packageName}-${channel}-${buildType}-v${versionName}-${versionCode}-${buildTime}.apk';
+    // 渠道配置文件
+    channelFile = new File("${project.getProjectDir()}/channel")
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:id="@+id/item_bank"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="@dimen/dp_45"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/item_circle_bank_icon"
+        android:layout_height="@dimen/dp_45" />
+    <TextView
+        android:maxLength="4"
+        android:textSize="11sp"
+        android:ellipsize="end"
+        android:text="建设银行"
+        android:textColor="@color/home_zx_text"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/item_circle_bank_icon"
+        android:layout_marginTop="@dimen/dp_5"
+        android:id="@+id/item_bank_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    </RelativeLayout>
+</RelativeLayout>
