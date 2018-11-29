@@ -6,7 +6,6 @@ import com.dudubaika.base.RxPresenter
 import com.dudubaika.model.bean.MyHttpResponse
 import com.dudubaika.model.http.ApiManager
 import com.dudubaika.model.http.CommonSubscriber
-import com.dudubaika.presenter.contract.MineverifyContract
 import com.dudubaika.util.RequsetUtil
 import com.dudubaika.util.RxUtil
 import com.dudubaika.util.SignUtils

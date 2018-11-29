@@ -88,12 +88,7 @@
         <activity
             android:name=".ui.activity.LoginActivity"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.DescriptionActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.RecommendActivity"
-            android:screenOrientation="portrait" />
+
         <activity
             android:name=".ui.activity.ForgetPwdActivity"
             android:screenOrientation="portrait" />
@@ -106,139 +101,39 @@
         <activity
             android:name=".ui.activity.RegestActivity"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.AuthInfoActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.AuthExtroContactsActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.CreditAssessmentActivity"
-            android:screenOrientation="portrait" />
+
+
         <activity
             android:name=".ui.activity.WebVerifyActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.moxie.client.MainActivity"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.OpinionUpActivity"
-            android:screenOrientation="portrait" />
+
         <activity
             android:name=".ui.activity.SettingActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.activity.AboutWeActivity"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.IdentityActivity"
-            android:screenOrientation="portrait" />
+
         <activity
             android:name=".idcard.IDCardScanActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".liveness.LivenessActivity"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.RecommendResultActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.WeiXinActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.DetailInfoActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.MyCollectionActivity"
-            android:screenOrientation="portrait" />
+
+
         <activity
             android:name=".ui.activity.VerifyWebActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.activity.ReviewLoginActivity"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.ProductDetailActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.SuggestionResultActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.ServiceOnlineActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.ProductInfoActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.LoanBooksActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.DayWeekMonthLoanActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.LoanDetailActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.ProductFormeActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.MineLoanRecordActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.AddLoanInfoActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.PrductListSimpleActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.SearchActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.HelpCenterActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.JpushDetailActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.MsgCenterListActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.BankListActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.CreditCardDetailActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.WriteMyTalkActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.TalkHomeActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.FindActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.FindDetailActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.MineTalkActivity"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.SearchTalkActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.TalkDetailActivity"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".ui.activity.ReporTalkActivity"
-            android:screenOrientation="portrait" />
+
         <activity
             android:name=".ui.activity.ImageLookActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.NoticeActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.activity.AdvertisingActivity"
@@ -334,7 +229,6 @@
         <meta-data android:name="TD_CHANNEL_ID" android:value="Your_channel_id" />
         -->
 
-        <activity android:name=".ui.activity.TagProductActivity"></activity>
     </application>
 
 </manifest>

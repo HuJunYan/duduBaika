@@ -71,11 +71,6 @@ class SettingActivity : BaseActivity<LoginOutPresenter>(), LoginOutContract.View
 
         notice_layout.setOnClickListener {
             //通知
-            if (UserUtil.isLogin(mActivity)) {
-                startActivity<NoticeActivity>()
-            }else{
-                startActivity<LoginActivity>()
-            }
         }
 
     }

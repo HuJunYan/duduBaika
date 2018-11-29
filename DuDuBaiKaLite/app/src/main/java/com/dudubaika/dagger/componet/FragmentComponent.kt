@@ -12,12 +12,9 @@ interface FragmentComponent {
 
     fun getActivity(): Activity
 
-    fun inject(fragment: HomeFragment)
     fun inject(fragment2: HomeFragment2)
-    fun inject(fragment2: HotProductFragment)
-    fun inject(fragment2: RapidFragment)
-    fun inject(fragment: DhFragment)
-    fun inject(fragment: YhFragment)
+    fun inject(fragment: HotProductFragment)
+    fun inject(fragment: RapidFragment)
     fun inject(fragment: CardFragment)
     fun inject(fragment: CreditCardFragment)
 

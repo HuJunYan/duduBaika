@@ -56,7 +56,7 @@ class VerifyMeFragment : BaseFragment<MineverifyPresenter>(), MineverifyContract
 //            } else {
 //                startActivity<ReviewLoginActivity>()
 //            }
-            startActivity<OpinionUpActivity>()
+//            startActivity<OpinionUpActivity>()
 
 
         })
@@ -71,7 +71,7 @@ class VerifyMeFragment : BaseFragment<MineverifyPresenter>(), MineverifyContract
             if (!UserUtil.isLogin(App.instance)) {
                 startActivity<ReviewLoginActivity>()
             } else {
-                startActivity<MyCollectionActivity>()
+//                startActivity<MyCollectionActivity>()
             }
         })
         tv_me_setting.setOnClickListener {

@@ -102,7 +102,6 @@ class HomeFragment2 : BaseFragment<HomePresenter>(), HomeContract.View {
 
         find.setOnClickListener {
             //筛选
-            startActivity<FindActivity>()
         }
         recommended.setOnClickListener {
             EventBus.getDefault().postSticky(CheckFoundFragmentEvent())
@@ -315,7 +314,6 @@ class HomeFragment2 : BaseFragment<HomePresenter>(), HomeContract.View {
                             ToastUtil.showToast(mContext!!, "您的额度正在估算中")
                         }
                         "7" -> {
-                            startActivity<ProductFormeActivity>()
                         }
                         "8" -> {
                             mPresenter.gotoAuthFK()
@@ -362,7 +360,6 @@ class HomeFragment2 : BaseFragment<HomePresenter>(), HomeContract.View {
         }
 
         p_name_key.setOnClickListener {
-          startActivity<PrductListSimpleActivity>(SearchActivity.CURRENTTAG to true)
         }
 
         bottom.bottom_dissmiss.setOnClickListener {
@@ -371,7 +368,6 @@ class HomeFragment2 : BaseFragment<HomePresenter>(), HomeContract.View {
         }
         bottom.setOnClickListener {
             if (!TextUtils.isEmpty(mBottomBean!!.product_list[0].product_id)) {
-                startActivity<ProductInfoActivity>(ProductInfoActivity.PRODUCT_ID to mBottomBean!!.product_list[0].product_id)
             }
         }
     }
@@ -789,7 +785,6 @@ class HomeFragment2 : BaseFragment<HomePresenter>(), HomeContract.View {
                     }
                     "2" -> {
                         //原生
-                        startActivity<JpushDetailActivity>(JpushDetailActivity.MSG_ID to message.message_id)
                     }
                 }
                 EventBus.getDefault().postSticky(SetMsgIsRead(message.message_id))
@@ -821,10 +816,6 @@ class HomeFragment2 : BaseFragment<HomePresenter>(), HomeContract.View {
         view.rl_product.setOnClickListener {
 
             val product = data.product_dialog
-            //到详情
-            startActivity<ProductInfoActivity>(ProductInfoActivity.PRODUCT_ID to product.product_id,
-                    ProductInfoActivity.TILTLE to product.product_name,
-                    ProductInfoActivity.PRODUCT_TYPE to GlobalParams.PRODUCT_TYPE_HOME_DIALOG)
             mProductDialog?.dismiss()
             timer.start()
 //            showMessageDialog(data)
@@ -879,9 +870,6 @@ class HomeFragment2 : BaseFragment<HomePresenter>(), HomeContract.View {
             hot.text = item.product_tag
 
             bottom.setOnClickListener {
-                startActivity<ProductInfoActivity>(ProductInfoActivity.PRODUCT_ID to item.product_id,
-                        ProductInfoActivity.TILTLE to item.product_name,
-                        ProductInfoActivity.PRODUCT_TYPE to "6")
             }
 
 
@@ -906,10 +894,6 @@ class HomeFragment2 : BaseFragment<HomePresenter>(), HomeContract.View {
         }
 
         banner_guide_content.setDelegate( { banner, _, _, position ->
-            startActivity<ProductInfoActivity>(ProductInfoActivity.PRODUCT_ID to mTopBean!!.recommend_list[position].product_id,
-                    ProductInfoActivity.TILTLE to mTopBean!!.recommend_list[position].recommend_title,
-                    ProductInfoActivity.PRODUCT_TYPE to "3")
-            mPresenter.dian(GlobalParams.FALG_ONE,mTopBean!!.recommend_list[position].product_id)
         })
     }
 
@@ -1075,7 +1059,6 @@ class HomeFragment2 : BaseFragment<HomePresenter>(), HomeContract.View {
                 ToastUtil.showToast(mContext!!, "您的额度正在估算中")
             }
             "7"->{
-                startActivity<ProductFormeActivity>()
             }
             "8" -> {
                 mPresenter.gotoAuthFK()

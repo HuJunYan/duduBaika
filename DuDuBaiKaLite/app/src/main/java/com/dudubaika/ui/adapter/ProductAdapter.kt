@@ -11,12 +11,9 @@ import com.alibaba.android.vlayout.layout.LinearLayoutHelper
 import com.chad.library.adapter.base.BaseViewHolder
 import com.dudubaika.R
 import com.dudubaika.base.GlobalParams
-import com.dudubaika.event.PointEvent
 import com.dudubaika.model.bean.ProductInfoListBean
-import com.dudubaika.ui.activity.ProductInfoActivity
 import com.dudubaika.util.ImageUtil
 import de.hdodenhof.circleimageview.CircleImageView
-import org.greenrobot.eventbus.EventBus
 import org.jetbrains.anko.startActivity
 
 class ProductAdapter(var activity: Context,var totalList :ArrayList<ProductInfoListBean.ProductListBean>,

@@ -4,15 +4,9 @@ import android.annotation.SuppressLint
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.StaggeredGridLayoutManager
 import android.text.TextUtils
-import android.view.Gravity
 import android.view.View
-import android.view.ViewGroup
-import android.widget.LinearLayout
-import android.widget.TextView
 import com.alibaba.android.vlayout.DelegateAdapter
 import com.alibaba.android.vlayout.VirtualLayoutManager
-import com.alibaba.android.vlayout.layout.LinearLayoutHelper
-import com.chad.library.adapter.base.BaseViewHolder
 import com.dudubaika.R
 import com.dudubaika.base.BaseFragment
 import com.dudubaika.base.GlobalParams
@@ -25,19 +19,15 @@ import com.dudubaika.model.bean.ProductInfoListBean
 import com.dudubaika.model.http.ApiSettings
 import com.dudubaika.presenter.contract.ProductContract
 import com.dudubaika.presenter.impl.ProductPresenter
-import com.dudubaika.ui.activity.ProductInfoActivity
 import com.dudubaika.ui.adapter.BaseDelegateAdapter
 import com.dudubaika.ui.adapter.HomeFtagmentListAdapter
 import com.dudubaika.ui.adapter.ProductAdapter
 import com.dudubaika.ui.view.MyGridLayoutManager
-import com.dudubaika.util.ImageUtil
 import com.dudubaika.util.RecycleUtils
-import de.hdodenhof.circleimageview.CircleImageView
 import kotlinx.android.synthetic.main.home_fragment1.*
 import kotlinx.android.synthetic.main.view_progress.view.*
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
-import org.jetbrains.anko.support.v4.startActivity
 
 @SuppressLint("ValidFragment")
 /**

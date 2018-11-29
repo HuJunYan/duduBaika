@@ -2,17 +2,14 @@ package com.dudubaika.ui.adapter
 
 import android.content.Context
 import android.text.TextUtils
-import android.view.MotionEvent
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.dudubaika.R
 import com.dudubaika.base.TalkingDataParams
 import com.dudubaika.event.MyLoanEvent
 import com.dudubaika.model.bean.MineLoanBean
-import com.dudubaika.ui.activity.LoanDetailActivity
 import com.dudubaika.ui.activity.WebActivity
 import com.dudubaika.util.ImageUtil
 import com.dudubaika.util.UserUtil

@@ -30,7 +30,6 @@ class MainActivity : SimpleActivity() {
     var mTabPosition: Int = 0
     var mExitTime: Long = 0
 
-    private var mHomeFragment: HomeFragment? = null
     private var mHomeFragment2: HomeFragment2? = null
     private var mCardFragment: CardFragment? = null
     private var mCardTest: CreditCardFragment? = null
@@ -152,7 +151,6 @@ class MainActivity : SimpleActivity() {
 
         view.dialog_cancle.setOnClickListener({
             //开启提醒
-           startActivity<NoticeActivity>()
             mDialog?.dismiss()
         })
         mDialog?.setContentView(view)
@@ -198,14 +196,14 @@ class MainActivity : SimpleActivity() {
     @Subscribe
     fun onLogoutEvent(event: LogOutEvent) {
         mVerifyHomeFragment?.refreshData()
-        mHomeFragment?.refreshData()
+//        mHomeFragment?.refreshData()
         mMeFragment?.refreshUI()
     }
 
 
     @Subscribe
     fun onLoginEvent(event: LoginSuccesfulEvent) {
-        mHomeFragment?.refreshData()
+//        mHomeFragment?.refreshData()
         mMeFragment?.refreshUI()
         mVerifyHomeFragment?.refreshData()
     }

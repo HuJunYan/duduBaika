@@ -2,9 +2,6 @@ package com.dudubaika.ui.fragment
 
 
 import android.support.v7.widget.RecyclerView
-import android.support.v7.widget.StaggeredGridLayoutManager
-import android.text.TextUtils
-import android.view.View
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
@@ -20,11 +17,8 @@ import com.dudubaika.model.bean.HomeCreditCardBean
 import com.dudubaika.presenter.contract.CreditCardContract
 import com.dudubaika.presenter.impl.CreditCardPresenter
 import com.dudubaika.ui.adapter.HomeCardBankListAdapter
-import com.dudubaika.ui.view.MyGridLayoutManager
 import com.dudubaika.util.StatusBarUtil
 import com.dudubaika.base.GlobalParams
-import com.dudubaika.ui.activity.BankListActivity
-import com.dudubaika.ui.activity.CreditCardDetailActivity
 import com.dudubaika.ui.activity.WebVerifyActivity
 import com.dudubaika.ui.adapter.BaseDelegateAdapter
 import com.dudubaika.ui.adapter.HomeCardListAdapter
@@ -234,7 +228,7 @@ class CreditCardFragment : BaseFragment<CreditCardPresenter>(),CreditCardContrac
 
                     when(item.type){
                         "1"->{
-                            startActivity<CreditCardDetailActivity>(CreditCardDetailActivity.CARDID to item.cardId)
+//                            startActivity<CreditCardDetailActivity>(CreditCardDetailActivity.CARDID to item.cardId)
                         }
                         "2"->{
                             startActivity<WebVerifyActivity>(WebVerifyActivity.WEB_URL_KEY to item.jumpUrl,WebVerifyActivity.WEB_URL_TITLE to item.cardName)
@@ -304,7 +298,7 @@ class CreditCardFragment : BaseFragment<CreditCardPresenter>(),CreditCardContrac
                 helper.getView<RelativeLayout>(R.id.item_bank).setOnClickListener {
 
 
-                    startActivity<BankListActivity>(BankListActivity.TYPE to "2",BankListActivity.BANKID to item.bank_id )
+//                    startActivity<BankListActivity>(BankListActivity.TYPE to "2",BankListActivity.BANKID to item.bank_id )
                 }
 
             }
@@ -436,7 +430,7 @@ class CreditCardFragment : BaseFragment<CreditCardPresenter>(),CreditCardContrac
         //功能卡专区点击事件
         view.setOnClickListener {
             val ability_id = mBean!!.ability_list[posotion].ability_id
-            startActivity<BankListActivity>(BankListActivity.ABILITY_ID to ability_id,BankListActivity.TYPE to "3")
+//            startActivity<BankListActivity>(BankListActivity.ABILITY_ID to ability_id,BankListActivity.TYPE to "3")
         }
     }
 }

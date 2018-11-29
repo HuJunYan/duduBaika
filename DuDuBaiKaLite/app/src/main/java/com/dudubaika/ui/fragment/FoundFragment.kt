@@ -187,10 +187,7 @@ class FoundFragment : BaseFragment<HomeFoundPresenter>(), HomeFoundContract.View
                 helper?.setText(R.id.tv_tag_name, item.tag_name)
                 ImageUtil.loadNoCache(mContext!!, helper!!.getView<ImageView>(R.id.iv), item!!.tag_logo, R.drawable.default_bank_card_logo)
 
-                helper?.getView<RelativeLayout>(R.id.item_home_talk).setOnClickListener {
-                    startActivity<TagProductActivity>(TagProductActivity.TAG_ID to item?.tag_id,
-                            TagProductActivity.TITLE to item?.tag_name)
-                }
+
             }
         }
     }
@@ -208,7 +205,6 @@ class FoundFragment : BaseFragment<HomeFoundPresenter>(), HomeFoundContract.View
                 ImageUtil.loadNoCache(mContext!!, helper!!.getView<ImageView>(R.id.found_in), item!!.discuss_logo, R.drawable.default_bank_card_logo)
 
                 helper?.getView<RelativeLayout>(R.id.talk_in).setOnClickListener {
-                startActivity<TalkHomeActivity>(TalkHomeActivity.TYPE to item?.discuss_type)
             }
        }
      }

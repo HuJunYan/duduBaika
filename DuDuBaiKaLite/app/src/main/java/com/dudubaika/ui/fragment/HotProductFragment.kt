@@ -25,8 +25,6 @@ import com.dudubaika.model.bean.HomeRefreshEvent
 import com.dudubaika.model.bean.ProductInfoListBean
 import com.dudubaika.model.http.ApiSettings
 import com.dudubaika.presenter.contract.ProductContract
-import com.dudubaika.presenter.impl.ProductPresenter
-import com.dudubaika.ui.activity.ProductInfoActivity
 import com.dudubaika.ui.adapter.BaseDelegateAdapter
 import com.dudubaika.ui.adapter.HomeFtagmentListAdapter
 import com.dudubaika.ui.adapter.ProductAdapter
@@ -39,11 +37,10 @@ import kotlinx.android.synthetic.main.fragment1.*
 import kotlinx.android.synthetic.main.view_progress.view.*
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
-import org.jetbrains.anko.support.v4.startActivity
 
 @SuppressLint("ValidFragment")
 class HotProductFragment @SuppressLint("ValidFragment")
-constructor(var product_type:String):BaseFragment<ProductPresenter>(),ProductContract.View{
+constructor(var product_type:String):BaseFragment<ProductPresenter>(), ProductContract.View{
 
    constructor() : this("")
 
@@ -315,10 +312,7 @@ constructor(var product_type:String):BaseFragment<ProductPresenter>(),ProductCon
                         index++
                     }
                     holder.getView<LinearLayout>(R.id.itme_product).setOnClickListener {
-                        startActivity<ProductInfoActivity>(ProductInfoActivity.PRODUCT_ID to item.product_id,
-                                ProductInfoActivity.TILTLE to item.product_name,
-                                ProductInfoActivity.PRODUCT_TYPE to product_type)
-                        mPresenter.dian(GlobalParams.FALG_TWO, item.product_id)
+
                     }
                 }
             }

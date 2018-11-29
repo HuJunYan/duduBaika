@@ -1,8 +1,6 @@
 package com.dudubaika.ui.adapter
 
 import android.content.Context
-import android.content.Intent
-import android.support.v4.content.ContextCompat.startActivity
 import android.text.TextUtils
 import android.view.Gravity
 import android.view.View
@@ -15,7 +13,6 @@ import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
 import com.dudubaika.R
 import com.dudubaika.model.bean.UsersAuthLimitBean
-import com.dudubaika.ui.activity.ProductInfoActivity
 import com.dudubaika.util.ImageUtil
 
 import de.hdodenhof.circleimageview.CircleImageView

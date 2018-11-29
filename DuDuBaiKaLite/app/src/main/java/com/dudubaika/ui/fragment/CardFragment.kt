@@ -20,14 +20,10 @@ import kotlinx.android.synthetic.main.fragment_card.*
 import kotlinx.android.synthetic.main.item_home_card_foot_view.view.*
 import com.dudubaika.base.GlobalParams
 import com.dudubaika.base.TalkingDataParams
-import com.dudubaika.ui.activity.BankListActivity
-import com.dudubaika.ui.activity.CreditCardDetailActivity
 import com.dudubaika.ui.activity.WebVerifyActivity
 import com.dudubaika.ui.adapter.HomeCardListAdapter
 import com.dudubaika.util.ImageUtil
-import com.dudubaika.util.ToastUtil
 import com.tendcloud.tenddata.TCAgent
-import kotlinx.android.synthetic.main.item_home_card_top_banner.view.*
 import kotlinx.android.synthetic.main.view_home_card_layout.*
 import org.jetbrains.anko.support.v4.startActivity
 import kotlin.collections.ArrayList
@@ -132,14 +128,7 @@ class CardFragment : BaseFragment<CreditCardPresenter>(),CreditCardContract.View
 
 
 
-        tv_jptj_more.setOnClickListener {
-            startActivity<BankListActivity>(BankListActivity.TYPE to "4")
-            TCAgent.onEvent(mContext, TalkingDataParams.MORE_BANK, "quality")
-        }
-        tv_gnk_more.setOnClickListener {
-            startActivity<BankListActivity>(BankListActivity.TYPE to "1")
-            TCAgent.onEvent(mContext, TalkingDataParams.MORE_BANK, "ability")
-        }
+
 
 
         swirefresh.setEnableNestedScroll(true)//是否启用嵌套滚动
@@ -197,7 +186,6 @@ class CardFragment : BaseFragment<CreditCardPresenter>(),CreditCardContract.View
 
                 val item = adapter.getItem(position) as HomeCreditCardBean.QualityListBean
                 if (!TextUtils.isEmpty(item.credit_id)){
-                    startActivity<CreditCardDetailActivity>(CreditCardDetailActivity.CARDID to item.credit_id)
                 }
             }
         }
@@ -232,16 +220,7 @@ class CardFragment : BaseFragment<CreditCardPresenter>(),CreditCardContract.View
             val item = mBean!!.banner_list[position]
 
             when(item.type){
-                "1"->{
-                  startActivity<CreditCardDetailActivity>(CreditCardDetailActivity.CARDID to item.cardId)
-                }
-                "2"->{
-                    startActivity<WebVerifyActivity>(WebVerifyActivity.WEB_URL_KEY to item.jumpUrl,WebVerifyActivity.WEB_URL_TITLE to item.cardName)
 
-                }
-                "3"->{
-                    //nothing
-                }
 
             }
 
@@ -295,7 +274,6 @@ class CardFragment : BaseFragment<CreditCardPresenter>(),CreditCardContract.View
         mBankListAdapter?.setOnItemClickListener { adapter, view, position ->
            //4列银行点击事件
             val listBean = adapter.getItem(position) as HomeCreditCardBean.BankListBean
-            startActivity<BankListActivity>(BankListActivity.TYPE to "2",BankListActivity.BANKID to listBean.bank_id )
 
             val kv =  hashMapOf<String,String>()
             kv.put("bankId", listBean.bank_id)
@@ -307,7 +285,6 @@ class CardFragment : BaseFragment<CreditCardPresenter>(),CreditCardContract.View
         //功能卡专区点击事件
         view.setOnClickListener {
             val ability_id = mBean!!.ability_list[posotion].ability_id
-            startActivity<BankListActivity>(BankListActivity.ABILITY_ID to ability_id,BankListActivity.TYPE to "3")
 
             val kv =  hashMapOf<String,String>()
             kv.put("abilityId", ability_id)
