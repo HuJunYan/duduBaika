@@ -78,17 +78,17 @@ class MainActivity : SimpleActivity() {
             mFoundFragment = FoundFragment()
             mMeFragment = MeFragment()
             mFragments?.add(mHomeFragment2!!)
-            mFragments?.add(mCardFragment!!)
-//            mFragments?.add(mCardTest!!)
-            mFragments?.add(mFoundFragment!!)
+//            mFragments?.add(mCardFragment!!)
+//           mFragments?.add(mCardTest!!)
+//            mFragments?.add(mFoundFragment!!)
             mFragments?.add(mMeFragment!!)
         }
 
         loadMultipleRootFragment(R.id.fl_container, 0,
                 mFragments?.get(0),
-                mFragments?.get(1),
-                mFragments?.get(2),
-                mFragments?.get(3))
+                mFragments?.get(1))
+             /*   mFragments?.get(2),
+                mFragments?.get(3))*/
 
     }
 

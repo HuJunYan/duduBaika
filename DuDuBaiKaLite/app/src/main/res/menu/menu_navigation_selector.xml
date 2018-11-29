@@ -5,14 +5,14 @@
         android:id="@+id/tab_home"
         android:icon="@drawable/selector_home"
         android:title="@string/home_tab" />
-    <item
+   <!-- <item
         android:id="@+id/tab_credit_card"
         android:icon="@drawable/selector_card"
         android:title="@string/lottery" />
     <item
         android:id="@+id/tab_found"
         android:icon="@drawable/selector_found"
-        android:title="@string/found" />
+        android:title="@string/found" />-->
 
     <item
         android:id="@+id/tab_me"
