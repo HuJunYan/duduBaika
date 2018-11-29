@@ -22,9 +22,6 @@ import com.dudubaika.base.GlobalParams;
 import com.dudubaika.event.PostAssessmentEvent;
 import com.dudubaika.event.RefreshCreditStatusEvent;
 import com.dudubaika.model.bean.CreditAssessBean;
-import com.dudubaika.ui.activity.AuthExtroContactsActivity;
-import com.dudubaika.ui.activity.AuthInfoActivity;
-import com.dudubaika.ui.activity.IdentityActivity;
 import com.dudubaika.ui.activity.WebVerifyActivity;
 import com.dudubaika.util.ImageUtil;
 import com.dudubaika.util.ToastUtil;
@@ -265,7 +262,6 @@ public class CreditAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
             String item_num = creditAssessItemBean.getItem_num();
             switch (item_num) {
                 case "1"://1身份认证
-                    gotoActivity(mActivity, IdentityActivity.class, null);
                     break;
 //                case "2"://2银行卡
 //                    gotoActivity(mActivity, BindBankCardActivity.class, null);
@@ -277,10 +273,8 @@ public class CreditAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                     gotoActivity(intent, mActivity);
                     break;
                 case "4"://4联系人
-                    gotoActivity(mActivity, AuthExtroContactsActivity.class, null);
                     break;
                 case "5":// 5个人信息
-                    gotoActivity(mActivity, AuthInfoActivity.class, null);
                     break;
                 case "6"://6芝麻信用
                     Intent intent2 = new Intent(mActivity, WebVerifyActivity.class);

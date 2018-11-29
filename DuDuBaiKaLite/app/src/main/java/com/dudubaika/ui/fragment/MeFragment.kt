@@ -64,7 +64,6 @@ class MeFragment : BaseFragment<MePresenter>(), MeContract.View {
             if (!UserUtil.isLogin(activity!!)) {
                 startActivity<LoginActivity>()
             } else {
-                startActivity<MsgCenterListActivity>()
             }
         }
 
@@ -73,7 +72,6 @@ class MeFragment : BaseFragment<MePresenter>(), MeContract.View {
             if (!UserUtil.isLogin(activity!!)) {
                 startActivity<LoginActivity>()
             } else {
-                startActivity<LoanBooksActivity>()
             }
         })
 
@@ -108,7 +106,6 @@ class MeFragment : BaseFragment<MePresenter>(), MeContract.View {
             if (!UserUtil.isLogin(activity!!)) {
                 startActivity<LoginActivity>()
             } else {
-                startActivity<OpinionUpActivity>()
             }
         })
         rl_service_online.setOnClickListener {
@@ -116,7 +113,6 @@ class MeFragment : BaseFragment<MePresenter>(), MeContract.View {
             if (!UserUtil.isLogin(activity!!)){
                 startActivity<LoginActivity>()
             }else{
-                startActivity<ServiceOnlineActivity>()
             }
         }
         //帮助中心
@@ -125,11 +121,9 @@ class MeFragment : BaseFragment<MePresenter>(), MeContract.View {
             if (!UserUtil.isLogin(activity!!)){
                 startActivity<LoginActivity>()
             }else{
-                startActivity<HelpCenterActivity>()
             }
         }
         rl_weixin.setOnClickListener({
-            startActivity<WeiXinActivity>()
         })
     }
 

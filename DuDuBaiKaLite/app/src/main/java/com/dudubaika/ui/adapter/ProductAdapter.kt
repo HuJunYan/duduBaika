@@ -117,9 +117,7 @@ class ProductAdapter(var activity: Context,var totalList :ArrayList<ProductInfoL
                         index++
                     }
                     holder.getView<LinearLayout>(R.id.itme_product).setOnClickListener {
-                        activity.startActivity<ProductInfoActivity>(ProductInfoActivity.PRODUCT_ID to item.product_id,
-                                ProductInfoActivity.TILTLE to item.product_name,
-                                ProductInfoActivity.PRODUCT_TYPE to product_type)
+
 //                        mPresenter.dian(GlobalParams.FALG_TWO, item.product_id)
                         //发送event 埋点到homeFragment2
 //                        EventBus.getDefault().post(PointEvent(pointFlag, item.product_id))

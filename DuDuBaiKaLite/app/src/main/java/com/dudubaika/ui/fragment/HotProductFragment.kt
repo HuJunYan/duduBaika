@@ -25,6 +25,7 @@ import com.dudubaika.model.bean.HomeRefreshEvent
 import com.dudubaika.model.bean.ProductInfoListBean
 import com.dudubaika.model.http.ApiSettings
 import com.dudubaika.presenter.contract.ProductContract
+import com.dudubaika.presenter.impl.ProductPresenter
 import com.dudubaika.ui.adapter.BaseDelegateAdapter
 import com.dudubaika.ui.adapter.HomeFtagmentListAdapter
 import com.dudubaika.ui.adapter.ProductAdapter

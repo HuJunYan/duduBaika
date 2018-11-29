@@ -12,7 +12,6 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.dudubaika.R;
 import com.dudubaika.model.bean.VerifyHomeDataBean;
-import com.dudubaika.ui.activity.ProductDetailActivity;
 
 import java.util.List;
 
@@ -76,10 +75,6 @@ public class VerifyAdapter extends BaseRecyclerViewAdapter<VerifyHomeDataBean.Pr
             now_apply.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    String product_id = verifyItemBean.getProduct_id();
-                    Intent intent = new Intent(mActivity, ProductDetailActivity.class);
-                    intent.putExtra("product_id", product_id);
-                    mActivity.startActivity(intent);
                 }
             });
         }

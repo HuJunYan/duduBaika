@@ -109,7 +109,6 @@ class FindListAdapter(data: List<UsersAuthLimitBean.ProductListBean>?,   var con
             index++
         }
         holder.getView<LinearLayout>(R.id.itme_product).setOnClickListener {
-            context.startActivity<ProductInfoActivity>(ProductInfoActivity.PRODUCT_ID to item.product_id, ProductInfoActivity.PRODUCT_TYPE to tag)
 
         }
 

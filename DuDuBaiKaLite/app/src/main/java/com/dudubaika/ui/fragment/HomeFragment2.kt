@@ -1050,7 +1050,6 @@ class HomeFragment2 : BaseFragment<HomePresenter>(), HomeContract.View {
     private fun goWhere() {
         when (mAuthBean?.auth_status) {
             "1", "2", "3", "4" -> {
-                AutherUtils.getInstance().StartActivity(_mActivity, mAuthBean?.auth_status, mAuthBean?.mobile_url)
             }
             "5"->{
                 gotoMoXieActivity()

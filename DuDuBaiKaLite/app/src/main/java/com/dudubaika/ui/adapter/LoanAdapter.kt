@@ -40,7 +40,6 @@ class LoanAdapter(var context: Context, private var list:List<MineLoanBean.Payno
             if (!TextUtils.isEmpty(item!!.jump_url)){
                 context.startActivity<WebActivity>(WebActivity.WEB_URL_KEY to item!!.jump_url)
             }else{
-                context.startActivity<LoanDetailActivity>(LoanDetailActivity.PRODUCT_ID to item?.product_id)
             }
         })
 

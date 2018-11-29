@@ -72,10 +72,7 @@ class JpushReceiver : BroadcastReceiver() {
                     }
 
                     if ("2".equals(jpushBaseBean.msg_type) || "1".equals(jpushBaseBean.msg_type)){
-                        if (UserUtil.isLogin(context) && className.contains(MsgCenterListActivity::class.java.simpleName)) {
-                            //如果在当前页 需要刷新
-                            EventBus.getDefault().post(RefreshMsgCenterListData())
-                        }
+
 
                     }
 
@@ -103,10 +100,6 @@ class JpushReceiver : BroadcastReceiver() {
                     "4" -> {
                         //跳转到详情
 
-                        val twoIntent = Intent(context, JpushDetailActivity::class.java)
-                        twoIntent.putExtra(JpushDetailActivity.MSG_ID,jpushBaseBean.msg_content.msg_id)
-                        twoIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                        toIntent(twoIntent, context)
                     }
                     "3" -> {
                         //
