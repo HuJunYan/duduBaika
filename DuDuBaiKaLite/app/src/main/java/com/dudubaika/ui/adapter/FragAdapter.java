@@ -1,5 +1,6 @@
 package com.dudubaika.ui.adapter;
 
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -9,9 +10,11 @@ import java.util.List;
 public class FragAdapter extends FragmentPagerAdapter {
 
     private List<Fragment> list2;
-    public FragAdapter(FragmentManager fm,List<Fragment> list) {
+    private List<String>mTitleList;
+    public FragAdapter(FragmentManager fm,List<Fragment> list,List<String>titleList) {
         super(fm);
         this.list2 =list;
+        this.mTitleList = titleList;
     }
 
     @Override
@@ -35,6 +38,12 @@ public class FragAdapter extends FragmentPagerAdapter {
 
 
 //        return list2.get(position);
+    }
+
+    @Nullable
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return mTitleList.get(position);
     }
 
     @Override

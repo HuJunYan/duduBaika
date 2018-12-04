@@ -47,6 +47,7 @@ import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
 import java.util.*
+import kotlin.collections.ArrayList
 
 /**
  * 有时间重构下（需求太多，没时间搞）
@@ -65,6 +66,7 @@ class HomeFragment2 : BaseFragment<HomePresenter>(), HomeContract.View {
     private var sixFragment:SixFragment?=null
     private var pagerAdapter: FragAdapter? =null
     private var listFragment: ArrayList<Fragment>? =null
+    private var mTitleList: ArrayList<String> = ArrayList()
     private var mCurrentIndex: Int = 0//当前滚动条的位置
     private var type:String="1"//当前选中的产品类型 默认是热门推荐
     private var isRefresh:Boolean=true//当前整个界面刷新是否可用
@@ -103,236 +105,7 @@ class HomeFragment2 : BaseFragment<HomePresenter>(), HomeContract.View {
         find.setOnClickListener {
             //筛选
         }
-        recommended.setOnClickListener {
-            EventBus.getDefault().postSticky(CheckFoundFragmentEvent())
-        }
 
-        b1.setOnClickListener {
-
-            if ("1" == type){
-                return@setOnClickListener
-            }
-            type= "1"
-            b1.setTextColor(resources.getColor(R.color.red_home))
-            left.visibility  =View.VISIBLE
-
-            b2.setTextColor(resources.getColor(R.color.global_txt_black5))
-            right.visibility =View.INVISIBLE
-            b3.setTextColor(resources.getColor(R.color.global_txt_black5))
-            three.visibility =View.INVISIBLE
-
-            b4.setTextColor(resources.getColor(R.color.global_txt_black5))
-            four.visibility =View.INVISIBLE
-
-            b5.setTextColor(resources.getColor(R.color.global_txt_black5))
-            five.visibility =View.INVISIBLE
-            b6.setTextColor(resources.getColor(R.color.global_txt_black5))
-            six.visibility =View.INVISIBLE
-
-            id_stickynavlayout_viewpager.currentItem = 0
-
-            mPresenter.dian(GlobalParams.FALG_FOUR,"")
-            isShow(currentCount)
-            EventBus.getDefault().post(HomeRefreshEvent(mTopBean!!.title_list[0].title_id))
-            TCAgent.onEvent(mContext, TalkingDataParams.HOME_TAB, mTopBean!!.title_list[0].title_id)
-            recordTalkData(0)
-        }
-        b2.setOnClickListener {
-
-            if ("2" == type){
-                return@setOnClickListener
-            }
-            type= "2"
-            b1.setTextColor(resources.getColor(R.color.global_txt_black5))
-            left.visibility  =View.INVISIBLE
-
-            b2.setTextColor(resources.getColor(R.color.red_home))
-            right.visibility =View.VISIBLE
-            b3.setTextColor(resources.getColor(R.color.global_txt_black5))
-            three.visibility =View.INVISIBLE
-            b4.setTextColor(resources.getColor(R.color.global_txt_black5))
-            four.visibility =View.INVISIBLE
-
-            b5.setTextColor(resources.getColor(R.color.global_txt_black5))
-            five.visibility =View.INVISIBLE
-            b6.setTextColor(resources.getColor(R.color.global_txt_black5))
-            six.visibility =View.INVISIBLE
-
-            id_stickynavlayout_viewpager.currentItem = 1
-            /*if (null !=mTopBean && null !=mTopBean!!.title_list && mTopBean!!.title_list.size>1  && !TextUtils.isEmpty(mTopBean!!.title_list[1].title_id)) {
-
-            }*/
-
-            mPresenter.dian(GlobalParams.FALG_FIVE,"")
-
-            isShow(currentCount)
-            EventBus.getDefault().post(HomeRefreshEvent(mTopBean!!.title_list[1].title_id))
-            recordTalkData(1)
-        }
-
-        b3.setOnClickListener {
-
-            if ("3" == type){
-                return@setOnClickListener
-            }
-            type= "3"
-            b1.setTextColor(resources.getColor(R.color.global_txt_black5))
-            left.visibility  =View.INVISIBLE
-
-            b3.setTextColor(resources.getColor(R.color.red_home))
-            three.visibility =View.VISIBLE
-            b2.setTextColor(resources.getColor(R.color.global_txt_black5))
-            right.visibility =View.INVISIBLE
-
-            b4.setTextColor(resources.getColor(R.color.global_txt_black5))
-            four.visibility =View.INVISIBLE
-
-            b5.setTextColor(resources.getColor(R.color.global_txt_black5))
-            five.visibility =View.INVISIBLE
-            b6.setTextColor(resources.getColor(R.color.global_txt_black5))
-            six.visibility =View.INVISIBLE
-
-            id_stickynavlayout_viewpager.currentItem = 2
-           /* if (null !=mTopBean && null !=mTopBean!!.title_list && mTopBean!!.title_list.size>2  && !TextUtils.isEmpty(mTopBean!!.title_list[2].title_id)) {
-
-            }*/
-
-            mPresenter.dian(GlobalParams.FALG_SIXTEEN,"")
-            isShow(currentCount)
-            EventBus.getDefault().post(HomeRefreshEvent(mTopBean!!.title_list[2].title_id))
-            recordTalkData(2)
-
-        }
-        b4.setOnClickListener {
-            if ("4" == type){
-                return@setOnClickListener
-            }
-            type= "4"
-            b1.setTextColor(resources.getColor(R.color.global_txt_black5))
-            left.visibility  =View.INVISIBLE
-
-            b3.setTextColor(resources.getColor(R.color.global_txt_black5))
-            three.visibility =View.INVISIBLE
-            b2.setTextColor(resources.getColor(R.color.global_txt_black5))
-            right.visibility =View.INVISIBLE
-            b4.setTextColor(resources.getColor(R.color.red_home))
-            four.visibility =View.VISIBLE
-
-            b5.setTextColor(resources.getColor(R.color.global_txt_black5))
-            five.visibility =View.INVISIBLE
-            b6.setTextColor(resources.getColor(R.color.global_txt_black5))
-            six.visibility =View.INVISIBLE
-
-            id_stickynavlayout_viewpager.currentItem = 3
-           /* if (null !=mTopBean && null !=mTopBean!!.title_list && mTopBean!!.title_list.size>3  && !TextUtils.isEmpty(mTopBean!!.title_list[3].title_id)) {
-
-            }*/
-
-//            mPresenter.dian(mTopBean!!.title_list[3].title_id,mTopBean!!.title_list[3].title_id)
-            isShow(currentCount)
-            EventBus.getDefault().post(HomeRefreshEvent(mTopBean!!.title_list[3].title_id))
-            recordTalkData(3)
-
-        }
-        b5.setOnClickListener {
-
-            if ("5" == type){
-                return@setOnClickListener
-            }
-            type= "5"
-            b1.setTextColor(resources.getColor(R.color.global_txt_black5))
-            left.visibility  =View.INVISIBLE
-
-            b3.setTextColor(resources.getColor(R.color.global_txt_black5))
-            three.visibility =View.INVISIBLE
-            b2.setTextColor(resources.getColor(R.color.global_txt_black5))
-            right.visibility =View.INVISIBLE
-            b4.setTextColor(resources.getColor(R.color.global_txt_black5))
-            four.visibility =View.INVISIBLE
-
-            b5.setTextColor(resources.getColor(R.color.red_home))
-            five.visibility =View.VISIBLE
-
-            b6.setTextColor(resources.getColor(R.color.global_txt_black5))
-            six.visibility =View.INVISIBLE
-            id_stickynavlayout_viewpager.currentItem = 4
-            /*if (null !=mTopBean && null !=mTopBean!!.title_list && mTopBean!!.title_list.size>4  && !TextUtils.isEmpty(mTopBean!!.title_list[4].title_id)) {
-            }*/
-
-//            mPresenter.dian(mTopBean!!.title_list[4].title_id,mTopBean!!.title_list[4].title_id)
-            isShow(currentCount)
-            EventBus.getDefault().post(HomeRefreshEvent(mTopBean!!.title_list[4].title_id))
-            recordTalkData(4)
-
-        }
-
-        b6.setOnClickListener {
-            if ("6" == type){
-                return@setOnClickListener
-            }
-            type= "6"
-            b1.setTextColor(resources.getColor(R.color.global_txt_black5))
-            left.visibility  =View.INVISIBLE
-
-            b3.setTextColor(resources.getColor(R.color.global_txt_black5))
-            three.visibility =View.INVISIBLE
-            b2.setTextColor(resources.getColor(R.color.global_txt_black5))
-            right.visibility =View.INVISIBLE
-            b4.setTextColor(resources.getColor(R.color.global_txt_black5))
-            four.visibility =View.INVISIBLE
-            b5.setTextColor(resources.getColor(R.color.global_txt_black5))
-            five.visibility =View.INVISIBLE
-
-            b6.setTextColor(resources.getColor(R.color.red_home))
-            six.visibility =View.VISIBLE
-
-            id_stickynavlayout_viewpager.currentItem = 5
-           /* if (null !=mTopBean && null !=mTopBean!!.title_list && mTopBean!!.title_list.size>5  && !TextUtils.isEmpty(mTopBean!!.title_list[5].title_id)) {
-
-            }*/
-
-//            mPresenter.dian(mTopBean!!.title_list[3].title_id,mTopBean!!.title_list[3].title_id)
-            isShow(currentCount)
-            EventBus.getDefault().post(HomeRefreshEvent(mTopBean!!.title_list[5].title_id))
-            recordTalkData(5)
-
-        }
-
-        //认证的状态
-        rl_is_auth.setOnClickListener {
-
-            if (UserUtil.isLogin(mContext!!)) {
-                if (isStart) {
-                    mPresenter.getAuthStatush(true)
-                } else {
-                    when (mAuthBean?.auth_status) {
-
-                        "5"->{
-                            gotoMoXieActivity()
-                        }
-                        "6" -> {
-                            ToastUtil.showToast(mContext!!, "您的额度正在估算中")
-                        }
-                        "7" -> {
-                        }
-                        "8" -> {
-                            mPresenter.gotoAuthFK()
-                            ToastUtil.showToast(mContext!!, "您的额度正在估算中")
-                        }
-                        else -> {
-                            goWhere()
-                        }
-                    }
-                }
-
-                if (!UserUtil.isUpLoadPhoneInfo(mContext!!) && !GlobalParams.DEVELOPER_PHONE.equals(UserUtil.getMobile(mContext!!))) {
-                    //如果没有上传过用户的信息 需要上传
-                    getUserInfo()
-                }
-            }else{
-                startActivity<LoginActivity>()
-            }
-        }
 
 
         refresh.setColorSchemeResources(R.color.red_home)
@@ -372,78 +145,7 @@ class HomeFragment2 : BaseFragment<HomePresenter>(), HomeContract.View {
         }
     }
 
-    private fun isShow(count:Int){
 
-        when(count){
-            1->{ right.visibility =View.GONE
-                 three.visibility =View.GONE
-                 four.visibility =View.GONE
-                 five.visibility =View.GONE
-                 six.visibility = View.GONE}
-            2->{
-                three.visibility =View.GONE
-                four.visibility =View.GONE
-                five.visibility =View.GONE
-                six.visibility = View.GONE}
-            3->{four.visibility =View.GONE
-                five.visibility =View.GONE
-                six.visibility = View.GONE}
-            4->{five.visibility =View.GONE
-                six.visibility = View.GONE}
-            5->{
-                six.visibility = View.GONE
-            }
-            6->{}
-        }
-    }
-
-    private fun isShowLine(count:Int){
-
-        when(count){
-            1->{ left.visibility =View.VISIBLE
-                right.visibility =View.INVISIBLE
-                three.visibility =View.INVISIBLE
-                four.visibility =View.INVISIBLE
-                five.visibility =View.INVISIBLE
-                six.visibility =View.INVISIBLE}
-            2->{
-                left.visibility =View.INVISIBLE
-                right.visibility =View.VISIBLE
-                three.visibility =View.INVISIBLE
-                four.visibility =View.INVISIBLE
-                five.visibility =View.INVISIBLE
-                six.visibility =View.INVISIBLE}
-            3->{left.visibility =View.INVISIBLE
-                right.visibility =View.INVISIBLE
-                three.visibility =View.VISIBLE
-                four.visibility =View.INVISIBLE
-                five.visibility =View.INVISIBLE
-                six.visibility =View.INVISIBLE}
-            4->{left.visibility =View.INVISIBLE
-                right.visibility =View.INVISIBLE
-                three.visibility =View.INVISIBLE
-                four.visibility =View.VISIBLE
-                five.visibility =View.INVISIBLE
-                six.visibility =View.INVISIBLE}
-            5->{
-                left.visibility =View.INVISIBLE
-                right.visibility =View.INVISIBLE
-                three.visibility =View.INVISIBLE
-                four.visibility =View.INVISIBLE
-                five.visibility =View.VISIBLE
-                six.visibility =View.INVISIBLE
-            }
-            6->{
-
-                left.visibility =View.INVISIBLE
-                right.visibility =View.INVISIBLE
-                three.visibility =View.INVISIBLE
-                four.visibility =View.INVISIBLE
-                five.visibility =View.INVISIBLE
-                six.visibility =View.VISIBLE
-            }
-        }
-    }
 
     override fun initData() {
 
@@ -501,49 +203,18 @@ class HomeFragment2 : BaseFragment<HomePresenter>(), HomeContract.View {
 
         if (null!=mTopBean?.title_list && mTopBean!!.title_list.size>1 ) {
 //            mTopBean!!.title_list.add(HomeTopInfo.TitleListBean("5","测试"))
-//            mTopBean!!.title_list.add(HomeTopInfo.TitleListBean("5","测试2"))
-//            mTopBean!!.title_list.add(HomeTopInfo.TitleListBean("5","测试3"))
+            for (item in mTopBean!!.title_list){
+                mTitleList.add(item.title_name)
+            }
             when(mTopBean!!.title_list.size){//
                 1->{
                     hotProductFragment = HotProductFragment(mTopBean!!.title_list[0].title_id)
-                    currentCount=1
-
-                    b1.text = mTopBean!!.title_list[0].title_name
-                    b1.visibility = View.VISIBLE
-                    b2.visibility = View.GONE
-                    b3.visibility = View.GONE
-                    b4.visibility = View.GONE
-                    b5.visibility = View.GONE
-                    b6.visibility = View.GONE
-                    //线
-                    left.visibility = View.VISIBLE
-                    right.visibility = View.GONE
-                    three.visibility = View.GONE
-                    four.visibility = View.GONE
-                    five.visibility = View.GONE
-                    six.visibility = View.GONE
                     listFragment?.clear()
                     listFragment?.add(hotProductFragment!!)
                 }
                 2->{
                     hotProductFragment = HotProductFragment(mTopBean!!.title_list[0].title_id)
                     rapidFragment = RapidFragment(mTopBean!!.title_list[1].title_id)
-                    currentCount=2
-                    b1.text = mTopBean!!.title_list[0].title_name
-                    b2.text = mTopBean!!.title_list[1].title_name
-                    b1.visibility = View.VISIBLE
-                    b2.visibility = View.VISIBLE
-                    b3.visibility = View.GONE
-                    b4.visibility = View.GONE
-                    b5.visibility = View.GONE
-                    b6.visibility = View.GONE
-                    //线
-                    left.visibility = View.VISIBLE
-                    right.visibility = View.INVISIBLE
-                    three.visibility = View.GONE
-                    four.visibility = View.GONE
-                    five.visibility = View.GONE
-                    six.visibility = View.GONE
                     listFragment?.clear()
                     listFragment?.add(hotProductFragment!!)
                     listFragment?.add(rapidFragment!!)
@@ -553,23 +224,7 @@ class HomeFragment2 : BaseFragment<HomePresenter>(), HomeContract.View {
                     hotProductFragment = HotProductFragment(mTopBean!!.title_list[0].title_id)
                     rapidFragment = RapidFragment(mTopBean!!.title_list[1].title_id)
                     threeFragment = ThreeFragment(mTopBean!!.title_list[2].title_id)
-                    currentCount=3
-                    b1.text = mTopBean!!.title_list[0].title_name
-                    b2.text = mTopBean!!.title_list[1].title_name
-                    b3.text = mTopBean!!.title_list[2].title_name
-                    b1.visibility = View.VISIBLE
-                    b2.visibility = View.VISIBLE
-                    b3.visibility = View.VISIBLE
-                    b4.visibility = View.GONE
-                    b5.visibility = View.GONE
-                    b6.visibility = View.GONE
-                    //线
-                    left.visibility = View.VISIBLE
-                    right.visibility = View.INVISIBLE
-                    three.visibility = View.INVISIBLE
-                    four.visibility = View.GONE
-                    five.visibility = View.GONE
-                    six.visibility = View.GONE
+
                     listFragment?.clear()
                     listFragment?.add(hotProductFragment!!)
                     listFragment?.add(rapidFragment!!)
@@ -582,25 +237,7 @@ class HomeFragment2 : BaseFragment<HomePresenter>(), HomeContract.View {
                     rapidFragment = RapidFragment(mTopBean!!.title_list[1].title_id)
                     threeFragment = ThreeFragment(mTopBean!!.title_list[2].title_id)
                     fourFragment = FourFragment(mTopBean!!.title_list[3].title_id)
-                    currentCount=4
-                    b1.text = mTopBean!!.title_list[0].title_name
-                    b2.text = mTopBean!!.title_list[1].title_name
-                    b3.text = mTopBean!!.title_list[2].title_name
-                    b4.text = mTopBean!!.title_list[3].title_name
 
-                    b1.visibility = View.VISIBLE
-                    b2.visibility = View.VISIBLE
-                    b3.visibility = View.VISIBLE
-                    b4.visibility = View.VISIBLE
-                    b5.visibility = View.GONE
-                    b6.visibility = View.GONE
-                    //线
-                    left.visibility = View.VISIBLE
-                    right.visibility = View.INVISIBLE
-                    three.visibility = View.INVISIBLE
-                    four.visibility = View.INVISIBLE
-                    five.visibility = View.GONE
-                    six.visibility = View.GONE
                     listFragment?.clear()
                     listFragment?.add(hotProductFragment!!)
                     listFragment?.add(rapidFragment!!)
@@ -614,26 +251,6 @@ class HomeFragment2 : BaseFragment<HomePresenter>(), HomeContract.View {
                     threeFragment = ThreeFragment(mTopBean!!.title_list[2].title_id)
                     fourFragment = FourFragment(mTopBean!!.title_list[3].title_id)
                     fiveFragment = FiveFragment(mTopBean!!.title_list[4].title_id)
-                    currentCount=5
-                    b1.text = mTopBean!!.title_list[0].title_name
-                    b2.text = mTopBean!!.title_list[1].title_name
-                    b3.text = mTopBean!!.title_list[2].title_name
-                    b4.text = mTopBean!!.title_list[3].title_name
-                    b5.text = mTopBean!!.title_list[4].title_name
-
-                    b1.visibility = View.VISIBLE
-                    b2.visibility = View.VISIBLE
-                    b3.visibility = View.VISIBLE
-                    b4.visibility = View.VISIBLE
-                    b5.visibility = View.VISIBLE
-                    b6.visibility = View.GONE
-                    //线
-                    left.visibility = View.VISIBLE
-                    right.visibility = View.INVISIBLE
-                    three.visibility = View.INVISIBLE
-                    four.visibility = View.INVISIBLE
-                    five.visibility = View.INVISIBLE
-                    six.visibility = View.GONE
                     listFragment?.clear()
                     listFragment?.add(hotProductFragment!!)
                     listFragment?.add(rapidFragment!!)
@@ -649,26 +266,6 @@ class HomeFragment2 : BaseFragment<HomePresenter>(), HomeContract.View {
                     fourFragment = FourFragment(mTopBean!!.title_list[3].title_id)
                     fiveFragment = FiveFragment(mTopBean!!.title_list[4].title_id)
                     sixFragment = SixFragment(mTopBean!!.title_list[5].title_id)
-                    currentCount=6
-                    b1.text = mTopBean!!.title_list[0].title_name
-                    b2.text = mTopBean!!.title_list[1].title_name
-                    b3.text = mTopBean!!.title_list[2].title_name
-                    b4.text = mTopBean!!.title_list[3].title_name
-                    b5.text = mTopBean!!.title_list[4].title_name
-
-                    b1.visibility = View.VISIBLE
-                    b2.visibility = View.VISIBLE
-                    b3.visibility = View.VISIBLE
-                    b4.visibility = View.VISIBLE
-                    b5.visibility = View.VISIBLE
-                    b6.visibility = View.VISIBLE
-                    //线
-                    left.visibility = View.VISIBLE
-                    right.visibility = View.INVISIBLE
-                    three.visibility = View.INVISIBLE
-                    four.visibility = View.INVISIBLE
-                    five.visibility = View.INVISIBLE
-                    six.visibility = View.INVISIBLE
                     listFragment?.clear()
                     listFragment?.add(hotProductFragment!!)
                     listFragment?.add(rapidFragment!!)
@@ -683,26 +280,14 @@ class HomeFragment2 : BaseFragment<HomePresenter>(), HomeContract.View {
 
         }
 
-//        id_stickynavlayout_viewpager.currentItem = type.toInt()-1
 
-        pagerAdapter = FragAdapter(childFragmentManager,listFragment)
+        pagerAdapter = FragAdapter(childFragmentManager,listFragment,mTitleList)
         id_stickynavlayout_viewpager.adapter  =pagerAdapter
-       /* if (type.toInt()-1<=listFragment!!.size){
-            setColorText(type.toInt())
-            id_stickynavlayout_viewpager.currentItem = type.toInt()-1
-            isShowLine(type.toInt())
-            isShow(type.toInt())
-        }else{
-            setColorText(1)
-            id_stickynavlayout_viewpager.currentItem = 0
-        }*/
-        setColorText(1)
+        tabLayout.setupWithViewPager(id_stickynavlayout_viewpager)
         id_stickynavlayout_viewpager.currentItem = 0
 
 
-        tv_loan.text = data.quota_desc
-        tv_loan_value.text = data.quota_value
-        tv_loan_mine.text = data.quota_click
+
 
         showTopInfo2()
 
@@ -1019,22 +604,7 @@ class HomeFragment2 : BaseFragment<HomePresenter>(), HomeContract.View {
    //用户认证状态
     override fun showStatus(data: AuthStatus) {
 
-       if (null==data){
-           return
-       }
-       mAuthBean= data
-       EventBus.getDefault().post(IsHideMyious(data.is_auth))
-       if ("1"==mAuthBean?.is_auth){
-           //开启认证
-           rl_is_auth.visibility = View.VISIBLE
-       }else{
-           rl_is_auth.visibility = View.GONE
-           return
-       }
-       //根据用户状态跳转到对应界面
-       if (isStart && !isRefreshAction) {
-           goWhere()
-       }
+
        isStart =true
        isRefreshAction = false
     }
@@ -1191,24 +761,6 @@ class HomeFragment2 : BaseFragment<HomePresenter>(), HomeContract.View {
         view.startAnimation(animation)
     }
 
-    fun setColorText(posotion:Int){
-        b1.setTextColor(resources.getColor(R.color.global_txt_black5))
-        b2.setTextColor(resources.getColor(R.color.global_txt_black5))
-        b3.setTextColor(resources.getColor(R.color.global_txt_black5))
-        b4.setTextColor(resources.getColor(R.color.global_txt_black5))
-        b5.setTextColor(resources.getColor(R.color.global_txt_black5))
-        b6.setTextColor(resources.getColor(R.color.global_txt_black5))
-        when(posotion){
-            1->  b1.setTextColor(resources.getColor(R.color.red_home))
-            2->  b2.setTextColor(resources.getColor(R.color.red_home))
-            3->  b3.setTextColor(resources.getColor(R.color.red_home))
-            4->  b4.setTextColor(resources.getColor(R.color.red_home))
-            5->  b5.setTextColor(resources.getColor(R.color.red_home))
-            6->  b6.setTextColor(resources.getColor(R.color.red_home))
-        }
-
-
-    }
 
 //    @Subscribe
 //    public fun getRecordStopAppEvent(event: RecordStopAppEvent) {

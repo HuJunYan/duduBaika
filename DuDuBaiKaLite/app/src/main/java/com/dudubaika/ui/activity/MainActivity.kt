@@ -1,28 +1,18 @@
 package com.dudubaika.ui.activity
 
 import android.app.Dialog
-import android.content.Context
 import android.support.v4.app.Fragment
-import android.text.TextUtils
 import android.view.KeyEvent
-import android.view.LayoutInflater
 import android.widget.Toast
-import cn.jpush.android.api.JPushInterface
 import com.dudubaika.R
 import com.dudubaika.base.*
 import com.dudubaika.event.*
 import com.dudubaika.ui.fragment.*
-import com.dudubaika.util.TimeUtils
-import com.dudubaika.util.UserUtil
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.dialog_isshow_notices.view.*
 import me.yokeyword.fragmentation.SupportFragment
-import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
-import org.jetbrains.anko.startActivity
 import q.rorbin.badgeview.Badge
 import q.rorbin.badgeview.QBadgeView
-import java.util.*
 
 class MainActivity : SimpleActivity() {
 
@@ -45,7 +35,6 @@ class MainActivity : SimpleActivity() {
     override fun initData() {
 //        gotoActivity(mActivity,TalkDetailActivity::class.java,null)
 //        startActivity<WebActivity>(WebActivity.WEB_URL_KEY to "http://waptwo.51jiuqi.com/")
-        isSHowNoticesDialog()
     }
 
     override fun initView() {
@@ -102,17 +91,8 @@ class MainActivity : SimpleActivity() {
         bnve.enableItemShiftingMode(false)
 
         bnve.setOnNavigationItemSelectedListener { item ->
-            var title = item.title
             val position = bnve.getMenuItemPosition(item)
-            if (position==0){
-                EventBus.getDefault().post(PointEvent(GlobalParams.FALG_SEVEN,""))
-            }else if(position==1){
-                EventBus.getDefault().post(PointEvent(GlobalParams.FALG_TWENTYVEL,""))
-            }else if(position==2){
-                EventBus.getDefault().post(PointEvent(GlobalParams.FALG_TWOSIX,""))
-            }else if(position==3){
-                EventBus.getDefault().post(PointEvent(GlobalParams.FALG_EIGHT,""))
-            }
+
             showHideFragment(mFragments?.get(position), mFragments?.get(mTabPosition))
             mTabPosition = position
             true
@@ -136,48 +116,9 @@ class MainActivity : SimpleActivity() {
                 }
     }
 
-    /**
-     * 弹窗
-     */
-    private fun showIsloginOutDialog() {
-        mDialog = Dialog(this,R.style.MyDialog)
-        val layoutInflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        val view = layoutInflater.inflate(R.layout.dialog_isshow_notices, null)
-        view.dialog_confirm.setOnClickListener({
-            //取消
-            UserUtil.savePushNoticeTime(mActivity,Date().toString().trim())
-            mDialog?.dismiss()
-        })
 
-        view.dialog_cancle.setOnClickListener({
-            //开启提醒
-            mDialog?.dismiss()
-        })
-        mDialog?.setContentView(view)
-        mDialog?.setCancelable(true)
-        mDialog?.show()
 
-    }
 
-    fun isSHowNoticesDialog(){
-
-        if (JPushInterface.isPushStopped(App.instance)){
-            //如果推送关闭了
-            var new_Date = Date()
-            var oldDate = UserUtil.getPushNoticeTime(mActivity)
-            if (TextUtils.isEmpty(oldDate)){
-                oldDate = new_Date.toString().trim()
-                UserUtil.savePushNoticeTime(mActivity,oldDate)
-            }
-
-            if (TimeUtils.getDaysFromTwoData(Date(oldDate),new_Date)>15){
-                //两次相隔大于15天
-                showIsloginOutDialog()
-            }
-
-        }
-
-    }
 
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {

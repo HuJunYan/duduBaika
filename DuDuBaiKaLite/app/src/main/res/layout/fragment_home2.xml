@@ -8,11 +8,11 @@
         android:background="@android:color/transparent"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-<LinearLayout
-android:orientation="vertical"
-    android:background="@android:color/transparent"
-android:layout_width="match_parent"
-android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <android.support.v7.widget.Toolbar
         android:id="@+id/tb_home2"
         style="@style/AppTheme.Toolbar"
@@ -67,72 +67,32 @@ android:layout_height="match_parent">
                 android:textColor="@color/white"
                 android:textSize="@dimen/sp_12" />
 
-            <RelativeLayout
-                android:visibility="gone"
-                android:layout_below="@id/banner_guide_content"
-                android:background="#88FFEDCD"
-                android:id="@+id/rl_is_auth"
-                android:layout_width="match_parent"
-                android:layout_height="35dp">
-                <TextView
-                    android:textSize="@dimen/sp_14"
-                    android:textColor="@color/global_txt_black5"
-                    android:layout_marginLeft="@dimen/dp_15"
-                    android:layout_centerVertical="true"
-                    android:id="@+id/tv_loan"
-                    android:text="借款额度 "
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:layout_marginLeft="@dimen/dp_5"
-                    android:textSize="@dimen/sp_14"
-                    android:textColor="#FFA92A"
-                    android:layout_toRightOf="@id/tv_loan"
-                    android:layout_centerVertical="true"
-                    android:id="@+id/tv_loan_value"
-                    android:text="3000-20000元"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:textSize="@dimen/sp_14"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:id="@+id/tv_loan_mine"
-                    android:text="测测我的额度 "
-                    android:layout_marginRight="@dimen/dp_15"
-                    android:textColor="@color/global_edit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-            </RelativeLayout>
 
-            <RelativeLayout
-                android:layout_marginTop="@dimen/dp_10"
-                android:layout_below="@id/rl_is_auth"
-                android:id="@+id/recommended"
-                android:background="#F7F6F6"
-                android:layout_width="match_parent"
-                android:layout_height="30dp">
 
-                <TextView
-                    android:textSize="@dimen/sp_14"
-                    android:textColor="#E86F1E"
-                    android:text="为您智能推荐 >"
-                    android:layout_centerInParent="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-
-            </RelativeLayout>
         </RelativeLayout>
 
 
 
         <TableLayout
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:id="@id/id_stickynavlayout_indicator"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#ffffffff" >
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                app:tabBackground="@android:color/white"
+                app:tabIndicatorColor="@android:color/holo_red_light"
+                app:tabIndicatorHeight="2dp"
+                app:tabMode="fixed"
+                app:tabSelectedTextColor="@android:color/holo_red_light"
+                app:tabTextColor="@android:color/darker_gray"/>
+
             <RelativeLayout
+                android:visibility="gone"
                 android:background="@color/white"
                 android:id="@+id/search_key"
                 android:layout_width="match_parent"
@@ -171,86 +131,11 @@ android:layout_height="match_parent">
             </RelativeLayout>
 
             <RelativeLayout
+                android:visibility="gone"
                 android:layout_below="@id/search_key"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_40" >
 
-
-            <LinearLayout
-
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_40"
-                android:background="#ffffffff">
-
-                <TextView
-                    android:visibility="gone"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:textColor="@color/red_home"
-                    android:textSize="@dimen/sp_14"
-                    android:id="@+id/b1"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:text="热门推荐"
-                    android:layout_height="wrap_content" />
-
-                <TextView
-                    android:visibility="gone"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:textColor="@color/global_txt_black5"
-                    android:textSize="@dimen/sp_14"
-                    android:id="@+id/b2"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:text="急速下款"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:visibility="gone"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:textColor="@color/global_txt_black5"
-                    android:textSize="@dimen/sp_14"
-                    android:id="@+id/b3"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:text="免征信"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:textColor="@color/global_txt_black5"
-                    android:textSize="@dimen/sp_14"
-                    android:id="@+id/b4"
-                    android:layout_weight="1"
-                    android:visibility="gone"
-                    android:layout_width="0dp"
-                    android:text="免征信"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:textColor="@color/global_txt_black5"
-                    android:textSize="@dimen/sp_14"
-                    android:id="@+id/b5"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:visibility="gone"
-                    android:text="免征信"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:textColor="@color/global_txt_black5"
-                    android:textSize="@dimen/sp_14"
-                    android:id="@+id/b6"
-                    android:visibility="gone"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:text="免征信"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
                 <View
 
                     android:layout_alignParentBottom="true"
@@ -258,55 +143,8 @@ android:layout_height="match_parent">
                     android:layout_width="match_parent"
                     android:layout_height="1px"/>
 
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_alignParentBottom="true"
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp">
-                   <View
-                       android:id="@+id/left"
-                       android:background="@color/red_home"
-                       android:layout_weight="1"
-                       android:layout_width="0dp"
-                       android:layout_height="2dp"/>
-                    <View
-                        android:id="@+id/right"
-                        android:visibility="invisible"
-                        android:background="@color/red_home"
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="2dp"/>
-                    <View
-                        android:id="@+id/three"
-                        android:visibility="invisible"
-                        android:background="@color/red_home"
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="2dp"/>
-                    <View
-                        android:id="@+id/four"
-                        android:background="@color/red_home"
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:visibility="gone"
-                        android:layout_height="2dp"/>
-                    <View
-                        android:id="@+id/five"
-                        android:visibility="gone"
-                        android:background="@color/red_home"
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="2dp"/>
-                    <View
-                        android:id="@+id/six"
-                        android:visibility="gone"
-                        android:background="@color/red_home"
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="2dp"/>
-
-                </LinearLayout>
             </RelativeLayout>
+
         </TableLayout>
 
     <com.dudubaika.ui.view.CustomViewPager

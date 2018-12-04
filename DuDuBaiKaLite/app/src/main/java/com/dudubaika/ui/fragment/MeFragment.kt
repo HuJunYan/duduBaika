@@ -115,16 +115,13 @@ class MeFragment : BaseFragment<MePresenter>(), MeContract.View {
             }else{
             }
         }
-        //帮助中心
+        //关于
         rl_help_center.setOnClickListener {
 
-            if (!UserUtil.isLogin(activity!!)){
-                startActivity<LoginActivity>()
-            }else{
-            }
+            startActivity<AboutWeActivity>()
         }
-        rl_weixin.setOnClickListener({
-        })
+        rl_weixin.setOnClickListener {
+        }
     }
 
     //未登录UI

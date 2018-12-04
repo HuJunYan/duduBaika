@@ -185,9 +185,7 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:2.1.0'
 
     androidTestImplementation 'org.testng:testng:6.9.6'
-    //腾讯buggly
-    implementation 'com.tencent.bugly:crashreport:latest.release'
-    implementation 'com.tencent.bugly:nativecrashreport:latest.release'
+
     //首页banner依赖
     implementation 'cn.bingoogolapple:bga-banner:2.2.4@aar'
     //日期选择器
@@ -207,6 +205,9 @@ dependencies {
     implementation 'com.baoyz.actionsheet:library:1.1.4'
     //share sdk
 //    implementation 'com.mob.sdk:MobSDK:+'
+    //腾讯buggly
+    implementation 'com.tencent.bugly:crashreport:latest.release'
+    implementation 'com.tencent.bugly:nativecrashreport:latest.release'
 
 }
 walle {
