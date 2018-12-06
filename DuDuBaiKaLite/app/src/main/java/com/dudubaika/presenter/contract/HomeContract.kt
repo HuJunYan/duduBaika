@@ -25,6 +25,9 @@ interface HomeContract {
         //获取弹窗
         fun getDialogForUser()
 
+        //测试
+        fun test()
+
     }
 
 }

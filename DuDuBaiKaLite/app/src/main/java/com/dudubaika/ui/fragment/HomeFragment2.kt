@@ -111,8 +111,8 @@ class HomeFragment2 : BaseFragment<HomePresenter>(), HomeContract.View {
         refresh.setColorSchemeResources(R.color.red_home)
 
        // 下拉时触发SwipeRefreshLayout的下拉动画，动画完毕之后就会回调这个方法
-        refresh.setOnRefreshListener({
-            if (search_key.visibility==View.GONE){
+        refresh.setOnRefreshListener {
+            /*if (search_key.visibility==View.GONE){
                 search_key.visibility= View.VISIBLE
             }
             isRefreshAction = true
@@ -124,9 +124,11 @@ class HomeFragment2 : BaseFragment<HomePresenter>(), HomeContract.View {
             if (UserUtil.isLogin(mContext!!)) {
                 mPresenter.getAuthStatush(false)
             }
-            mPresenter.getBottomInfo(false)
+            mPresenter.getBottomInfo(false)*/
 
-        })
+            mPresenter.test()
+
+        }
 
         return_top.setOnClickListener {
             EventBus.getDefault().postSticky(HomeReturnTop(type))

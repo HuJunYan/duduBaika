@@ -220,48 +220,20 @@ object ApiManager {
     //用户认证状态
     fun getAuthStatus(body: RequestBody): Flowable<MyHttpResponse<AuthStatus>> = mApiService.getAuthStatus(body)
 
-    //获取用户额度
-    fun getUsersAuthLimit(body: RequestBody): Flowable<MyHttpResponse<UsersAuthLimitBean>> = mApiService.getUsersAuthLimit(body)
 
-    //获取用户账本信息
-    fun getUsersLoanInfo(body: RequestBody): Flowable<MyHttpResponse<MyLoadDetailBean>> = mApiService.getUsersLoanInfo(body)
 
-    //更改用户账本记账状态
-    fun changeLoanStatus(body: RequestBody): Flowable<MyHttpResponse<Any>> = mApiService.changeLoanStatus(body)
-
-    //获取我的账单
-    fun getMineLoan(body: RequestBody): Flowable<MyHttpResponse<MineLoanBean>> = mApiService.getMineLoan(body)
-
-    //获取账单详情
-    fun getLoanDetail(body: RequestBody): Flowable<MyHttpResponse<LoanDetailBean>> = mApiService.getLoanDetail(body)
-
-    //修改或者增加账单详情
-    fun addOrChangeLoan(body: RequestBody): Flowable<MyHttpResponse<Any>> = mApiService.addOrChangeLoan(body)
-
-    //获取下款入口
-    fun getProductListSimple(body: RequestBody): Flowable<MyHttpResponse<ProductListSimpleBean>> = mApiService.getProductListSimple(body)
 
     //更改魔蝎状态
     fun changeMoxieStatus(body: RequestBody): Flowable<MyHttpResponse<Any>> = mApiService.changeMoxieStatus(body)
-    //获取推送消息详情
-    fun getDetailJpush(body: RequestBody): Flowable<MyHttpResponse<JpushDetailBean>> = mApiService.getDetailJpush(body)
     //设置极光消息为已读
     fun setMsgRead(body: RequestBody): Flowable<MyHttpResponse<Any>> = mApiService.setMsgRead(body)
 
-    //获取消息中的消息
-    fun getMsgCenterList(body: RequestBody): Flowable<MyHttpResponse<MsgCenterListBean>> = mApiService.getMsgCenterList(body)
     //是否有未读消息
     fun getIsReadMsg(body: RequestBody): Flowable<MyHttpResponse<IshaveNoReadMsgBean>> = mApiService.getIsReadMsg(body)
    //获取弹窗底部数据
     fun getHomeButtomDialogData(body: RequestBody): Flowable<MyHttpResponse<HomeButtomDialogBean>> = mApiService.getHomeButtomDialogData(body)
-   //帮助中心
-    fun helpCenter(body: RequestBody): Flowable<MyHttpResponse<HelpCenterBean>> = mApiService.helpCenter(body)
     //获取信用卡首页数据
     fun getCreditCardData(body: RequestBody): Flowable<MyHttpResponse<HomeCreditCardBean>> = mApiService.getCreditCardData(body)
-   //获取信用卡列表数据
-    fun getCreditCardListData(body: RequestBody): Flowable<MyHttpResponse<CreditCardListBean>> = mApiService.getCreditCardListData(body)
-   //获取信用卡详情数据
-    fun getCreditCardDetail(body: RequestBody): Flowable<MyHttpResponse<CreditCardDetailBean>> = mApiService.getCreditCardDetail(body)
    //获取筛选初始化的数据
     fun getInitSoftData(body: RequestBody): Flowable<MyHttpResponse<FindInitBean>> = mApiService.getInitSoftData(body)
    //获取筛选后的数据
@@ -269,24 +241,6 @@ object ApiManager {
 
     //获取发现首页数据
     fun getFoundHomeData(body: RequestBody): Flowable<MyHttpResponse<HomeFoundBean>> = mApiService.getFoundHomeData(body)
-   //获取论坛首页数据
-    fun getHomeTalkListData(body: RequestBody): Flowable<MyHttpResponse<CardMoneyListBean>> = mApiService.getHomeTalkListData(body)
-   //获取论坛中我的帖子数据
-    fun getMineTalkListData(body: RequestBody): Flowable<MyHttpResponse<CardMoneyListBean>> = mApiService.getMineTalkListData(body)
-    //发帖
-    fun sendMyTalk(body: RequestBody, @Part files: ArrayList<MultipartBody.Part>): Flowable<MyHttpResponse<Any>> = mApiService.sendMyTalk(body,files)
-   //s搜帖
-    fun searchTalk(body: RequestBody): Flowable<MyHttpResponse<CardMoneyListBean>> = mApiService.searchTalk(body)
-   //详情
-    fun getDetaliTalkData(body: RequestBody): Flowable<MyHttpResponse<TalkDetailBean>> = mApiService.getDetaliTalkData(body)
-   //评论文章
-    fun dissTalk(body: RequestBody): Flowable<MyHttpResponse<Any>> = mApiService.dissTalk(body)
-    //举报帖子
-    fun reportTalk(body: RequestBody): Flowable<MyHttpResponse<Any>> = mApiService.reportTalk(body)
-    //获取举报信息
-    fun getReportInfo(body: RequestBody): Flowable<MyHttpResponse<ReportBean>> = mApiService.getReportInfo(body)
-    //快讯列表消息
-    fun getMsgList(body: RequestBody): Flowable<MyHttpResponse<MsgListBean>> = mApiService.getMsgList(body)
    //启动广告图
     fun startAdvertise(body: RequestBody): Flowable<MyHttpResponse<AdvertisingBean>> = mApiService.startAdvertise(body)
     //app 启动时间
@@ -297,6 +251,7 @@ object ApiManager {
     fun getHomeDialogForUser(body: RequestBody): Flowable<MyHttpResponse<HomeDialogForUser>> = mApiService.getHomeDialogForUser(body)
     //根据标签获取的产品列表
     fun getTagProductList(body: RequestBody): Flowable<MyHttpResponse<ProductInfoListBean>> = mApiService.getTagProductList(body)
+
 
 
 }

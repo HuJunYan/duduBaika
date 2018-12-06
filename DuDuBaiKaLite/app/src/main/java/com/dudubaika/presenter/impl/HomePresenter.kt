@@ -6,6 +6,7 @@ import com.dudubaika.model.bean.*
 import com.dudubaika.model.http.ApiManager
 import com.dudubaika.model.http.ApiSettings
 import com.dudubaika.model.http.CommonSubscriber
+import com.dudubaika.model.http.TianShenApiManager
 import com.dudubaika.presenter.contract.HomeContract
 import com.dudubaika.util.RequsetUtil
 import com.dudubaika.util.RxUtil
@@ -17,6 +18,20 @@ import javax.inject.Inject
 
 class HomePresenter @Inject constructor()
     : RxPresenter<HomeContract.View>(), HomeContract.Presenter<HomeContract.View> {
+    override fun test() {
+        addSubscribe(TianShenApiManager.testURL()
+                .compose(RxUtil.rxSchedulerHelper<MyHttpResponse<Any>>())
+                .compose(RxUtil.handleResult<Any>())
+                .subscribeOn(Schedulers.newThread())
+                .subscribeWith(object : CommonSubscriber<Any>(mView, false,
+                        false) {
+                    override fun onNext(t: Any) {
+                        super.onNext(t)
+                    }
+                }))
+
+    }
+
     override fun getDialogForUser() {
         //得到弹窗信息
         val jsonObject = JSONObject()

@@ -36,4 +36,7 @@ interface TianShenApiService {
     fun saveIdNumInfo(@Part("json") description: RequestBody, @Part files: ArrayList<MultipartBody.Part>): Flowable<MyHttpResponse<Any>>
 
 
+    @POST(ApiSettings.SAVE_IDNUM_INFO)
+    fun testURL(): Flowable<MyHttpResponse<Any>>
+
 }

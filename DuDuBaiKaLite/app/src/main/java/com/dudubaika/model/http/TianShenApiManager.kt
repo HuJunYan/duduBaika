@@ -20,7 +20,7 @@ object TianShenApiManager {
 
 
     //正式
-    private val HOST_PRO: String = "http://dudueasy.dudujr.com/"
+    private val HOST_PRO: String = "https://www.baidu.com/"
     //预发布
     private val HOST_PRE: String = "http://pre.dudueasy.dudujr.com/"
     //开发&测试
@@ -109,6 +109,7 @@ object TianShenApiManager {
     //校验身份一致性并保存
     fun checkFace(body: RequestBody, @Part files: ArrayList<MultipartBody.Part>): Flowable<MyHttpResponse<Any>> = mApiService.checkFace(body, files)
 
-
+ //测试
+    fun testURL(): Flowable<MyHttpResponse<Any>> = mApiService.testURL()
 
 }
