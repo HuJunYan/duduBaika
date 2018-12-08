@@ -19,12 +19,14 @@ import java.util.concurrent.TimeUnit
 object TianShenApiManager {
 
 
-    //正式
-    private val HOST_PRO: String = "https://www.baidu.com/"
+
     //预发布
     private val HOST_PRE: String = "http://pre.dudueasy.dudujr.com/"
     //开发&测试
     private val HOST_DEV: String = "http://dev.duduapi.huaxick.com/"
+
+    //自己的地址
+    private val HOST_PRO: String = "https://www.baidu.com/"
 
     var mHost = ""
 
